@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>日本之旅行程</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 引入字體：新增 Noto Serif TC (宋體) 用於標題，營造日式氛圍 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@500;700&family=Roboto+Mono:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', Inter, sans-serif;
+            background-color: #f2f4f6; /* 稍微帶冷灰的背景，襯托卡片的暖色 */
+            color: #333333; /* 炭灰色文字，比純黑柔和 */
+            font-size: 1rem; 
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* 日式標題字體 */
+        .font-serif-jp {
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        /* 大螢幕調整 */
+        @media (min-width: 768px) {
+            body {
+                font-size: 1.125rem; 
+            }
+        }
+
+        /* 隱藏原生滾動條 */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .itinerary-item {
+            transition: all 0.2s ease-in-out;
+        }
+        .font-mono {
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        /* RWD 時間欄位設定 */
+        .time-column {
+            width: 60px;
+            text-align: right;
+            padding-right: 0.75rem;
+            position: relative; 
+            z-index: 1; 
+            flex-shrink: 0;
+        }
+        
+        @media (min-width: 768px) {
+            .time-column {
+                width: 80px; 
+                padding-right: 1.5rem;
+            }
+        }
+
+        /* 時間軸圓點 */
+        .timeline-dot {
+            position: absolute;
+            right: -5px;
+            top: 1.5rem; 
+            transform: translateY(-50%);
+            width: 10px; 
+            height: 10px;
+        }
+        
+        @media (min-width: 768px) {
+            .timeline-dot {
+                right: -3px;
+                top: 1.6rem;
+            }
+        }
+
+        /* 時間軸線條 */
+        .timeline-line {
+            position: absolute;
+            left: 60px;
+            top: 0;
+            bottom: 0;
+            width: 1px; 
+            background-color: #e0e0e0; 
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line {
+                left: 80px;
+            }
+        }
+
+        #date-nav {
+            top: 85px;
+        }
+        @media (min-width: 768px) {
+            #date-nav {
+                top: 96px;
+            }
+        }
+        
+        /* 日式卡片紋理效果 (可選) */
+        .bg-washi {
+            background-color: #fafaf6;
+            background-image: url("data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 4 4' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3h1v1H1V3zm2-2h1v1H3V1z' fill='%23dcdcdc' fill-opacity='0.15' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <div id="app" class="max-w-xl mx-auto bg-white min-h-screen shadow-lg pb-10">
+
+        <!-- Header -->
+        <header class="sticky top-0 z-20 bg-white border-b border-gray-200 p-3 md:p-4 shadow-sm h-[85px] md:h-[96px] flex flex-col justify-center">
+            <h1 class="text-2xl md:text-3xl font-serif-jp font-bold text-gray-800 text-center tracking-wide">日本行程總覽</h1>
+            <p class="text-sm md:text-base text-gray-500 text-center mt-1 font-serif-jp">瀨戶內海 (共9日)</p>
+        </header>
+        
+        <nav id="date-nav" class="no-scrollbar sticky z-10 bg-white/95 backdrop-blur-sm border-b border-gray-200 overflow-x-auto flex flex-row p-2 space-x-2"></nav>
+
+        <main id="itinerary-content" class="p-3 md:p-4"></main>
+
+        <div id="footer-message" class="p-4 text-center text-sm md:text-base text-gray-400 font-serif-jp"> 
+            💡 此為純瀏覽模式
+        </div>
+
+    </div>
+
+    <script>
+        // 行程數據結構
+        let itineraryData = [
+            {
+                date: "11/29(六)",
+                theme: "岡山/高松",
+                city: "岡山・高松",
+                events: [
+                    { time: "11:10-14:35", location: "搭飛機", note: "注意國際線需提前2.5小時到場", type: "transport" },
+                    { time: "16:00-16:30", location: "岡山站 Okayama", note: "搭乘機場巴士到岡山站(可刷IC卡)，並在岡山站開通 JR PASS", type: "transport" },
+                    { time: "16:40-17:35", location: "高松站 Takamatsu", note: "往高松班次，車程約1小時。建議班次：15:42, 16:13, 16:42, 17:13, 17:42, 18:13", type: "transport" },
+                    { time: "Check-in", location: "高松站前超級旅館", note: "車站步行大約2到3分鐘", type: "stay" },
+                    { time: "晚餐", location: "お食事処 まつおか", note: "距離高松站 600公尺 (約1000日圓)", type: "dining" },
+                    { time: "晚上", location: "高松丸龜町商店街、高松港夜景", note: "四國最長的商店街", type: "sightseeing" },
+                ]
+            },
+            {
+                date: "11/30(日)",
+                theme: "小豆島",
+                city: "小豆島",
+                events: [
+                    { time: "07:20-07:30", location: "飯店至高松港", note: "從飯店步行約5-7分鐘(走慢~10分鐘內)距離約650公尺。船票通常在出航前約30分鐘開始販售，建議至少在7:30到達碼頭。", type: "transport" },
+                    { time: "08:02-09:02", location: "高松港-土庄港", note: "購買小豆島島內1日巴士乘車券", type: "transport" },
+                    { time: "09:40-10:12", location: "土庄港-草壁港", note: "搭乘巴士（坂手線）", type: "transport" },
+                    { time: "10:18-10:30", location: "草壁港-紅雲亭", note: "轉乘寒溪急行線（銜接班次）", type: "transport" },
+                    { time: "10:42-10:47", location: "寒霞溪纜車", note: "紅雲亭站搭乘纜車車程約5分鐘(纜車6分一班)纜車連接紅雲亭站和山頂站，每12分鐘一班。", type: "transport" },
+                    { time: "11:00-13:00", location: "寒霞溪", note: "乘坐纜車到山頂，然後徒步下山", type: "sightseeing" },
+                    { time: "13:00-13:17", location: "紅雲亭-オリーブ公園口", note: "寒霞溪急行線(紅雲亭站)至橄欖公園（配合景點時間，調整巴士抵達時間）", type: "transport" },
+                    { time: "13:17-14:30", location: "橄欖公園", note: "拍攝魔女宅急便風車照，逛希臘風格的建築物和庭園", type: "sightseeing" },
+                    { time: "15:00-15:22", location: "オリーブ公園口-國際ホテル", note: "田ノ浦映画村線(橄欖公園到天使之路)國際ホテル下車步行5分鐘到天使之路", type: "transport" },
+                    { time: "15:30-16:00", location: "天使之路", note: "先查詢當天的潮汐拍照、欣賞風景", type: "sightseeing" },
+                    { time: "16:58-17:08", location: "國際ホテル-土庄港", note: "田ノ浦映画村線(天使之路到土庄港)走回國際ホテル搭車", type: "transport" },
+                    { time: "17:30-18:30", location: "土庄港-高松", note: "回程船班 (航行約1小時)", type: "transport" },
+                    { time: "晚餐", location: "晚餐", note: "在高松港周邊或前往飯店途中用餐", type: "dining" },
+                    { time: "Check-in", location: "FAV HOTEL TAKAMATSU", note: "JR高松站步行5分鐘至高松築港站乘琴平電鐵平線在瓦町站下車(車程7分鐘)。瓦町站步行約4分鐘(約400公尺)即可抵達", type: "stay" },
+                ]
+            },
+            {
+                date: "12/1(一)",
+                theme: "高松/福山",
+                city: "高松・福山",
+                events: [
+                    { time: "08:00-08:25", location: "飯店-高松站", note: "寄放3件大行李至置物櫃", type: "transport" },
+                    { time: "08:25-08:35", location: "高松站-栗林公園北口站", note: "JR 列車 (使用 JR Pass)，步行至栗林公園", type: "transport" },
+                    { time: "08:45-11:15", location: "栗林公園", note: "欣賞日本最美庭園，使用JR Pass", type: "sightseeing" },
+                    { time: "11:25-11:35", location: "栗林公園北口站-高松站", note: "JR 列車", type: "transport" },
+                    { time: "11:45-12:45", location: "玉藻公園 (高松城跡)", note: "遊覽高松城遺址", type: "sightseeing" },
+                    { time: "12:45-13:30", location: "午餐/取行李", note: "在JR站周邊用餐", type: "dining" },
+                    { time: "14:10-15:02", location: "高松站-岡山站", note: "MarineLiner38號 (52分鐘)", type: "transport" },
+                    { time: "15:11-15:27", location: "岡山站-福山站", note: "JR山陽新幹線 (16分鐘)", type: "transport" },
+                    { time: "Check-in", location: "Daiwa Roynet Hotel Fukuyama Ekimae", type: "stay" },
+                    { time: "16:30-17:30", location: "福山城公園", note: "天守外觀、石垣、護城河", type: "sightseeing" },
+                    { time: "晚餐", location: "お好み焼き 鉄板焼き いつちゃん", note: "在地名店 (900-1,200 日圓)", type: "dining" },
+                    { time: "晚上", location: "宮通り商店街", note: "商店街", type: "sightseeing" }
+                ]
+            },
+            {
+                date: "12/2(二)",
+                theme: "島波海道",
+                city: "尾道・生口島",
+                events: [
+                    { time: "07:45-08:06", location: "福山站-尾道站", note: "車程21分鐘", type: "transport" },
+                    { time: "08:10-08:50", location: "尾道站租單車 / 渡船至向島", type: "transport" },
+                    { time: "08:50-13:00", location: "騎單車：向島→因島→生口島→瀨戶田港", note: "全程約26公里，輕鬆騎約2.5小時", type: "transport" },
+                    { time: "13:00-14:20", location: "午餐 (しまなみロマン瀬戸田港)", note: "提供丼飯多種經典料理", type: "dining" },
+                    { time: "14:20-14:35", location: "還單車", note: "瀨戶田觀光案内所", type: "activity" },
+                    { time: "15:00-15:44", location: "瀨戶田港→尾道車站", note: "14:45 左右去買票渡輪航程約40分鐘(1.5～2小時才有一班，前一班船是13:25)", type: "transport" },
+                    { time: "15:50-16:10", location: "尾道車站→纜車山麓站", note: "步行約 15 分鐘(尾道在12月初的日落時間大約在 16:50至17:00 之間)", type: "transport" },
+                    { time: "16:10-16:20", location: "千光寺公園展望台", note: "搭纜車上山 (車程3分鐘)，展望台眺望瀨戶內海的島嶼風光。", type: "transport" },
+                    { time: "16:20-17:45", location: "千光寺 → 貓之細道 → 尾道車站", note: "順著「文學之道」慢慢步行下山", type: "sightseeing" },
+                    { time: "17:45-18:10", location: "晚餐 (月波食堂)", note: "距尾道站約300公尺，定食約¥1000以下", type: "dining" },
+                    { time: "18:29-18:50", location: "尾道站-福山站", note: "JR山陽本線", type: "transport" },
+                ]
+            },
+            {
+                date: "12/3(三)",
+                theme: "廣島",
+                city: "廣島",
+                events: [
+                    { time: "08:25-08:49", location: "福山站-廣島站", note: "新幹線 (24分鐘)", type: "transport" },
+                    { time: "08:50-09:20", location: "廣島站-原爆圓頂館", note: "搭乘電車", type: "transport" },
+                    { time: "09:20-09:40", location: "原爆圓頂館", note: "開放的戶外遺址", type: "sightseeing" },
+                    { time: "10:00-12:00", location: "和平紀念資料館", note: "步行約7分鐘（約500公尺），穿過元安橋即可抵達資料館", type: "sightseeing" },
+                    { time: "12:15-13:30", location: "午餐 (紙鶴廣場附近)", note: "步行約 9 分鐘（約650公尺），享用廣島名物「廣島燒」", type: "dining" },
+                    { time: "13:30-14:00", location: "紙鶴廣場", note: "", type: "sightseeing" },
+                    { time: "14:20-15:00", location: "廣島城", note: "被原子彈摧毀後重建", type: "sightseeing" },
+                    { time: "15:10-17:00", location: "縮景園", note: "美麗的庭園", type: "sightseeing" },
+                    { time: "17:15-19:30", location: "逛街與晚餐 (本通商店街)", note: "廣島最熱鬧的購物區", type: "dining" },
+                    { time: "晚餐", location: "牡蠣星鰻壽司飯便當", note: "在車站內可以買到，價格約1,300日圓", type: "dining" },
+                    { time: "晚上", location: "廣島站-福山站", note: "搭新幹線 (約23分)", type: "transport" },
+                ]
+            },
+            {
+                date: "12/4(四)",
+                theme: "宮島",
+                city: "宮島",
+                events: [
+                    { time: "08:25-08:49", location: "福山站-廣島站", note: "新幹線 (24分鐘)", type: "transport" },
+                    { time: "09:00-09:27", location: "廣島站-宮島港", note: "JR至宮島口站約27分，車資約￥420。轉JR西日本宮島渡輪", type: "transport" },
+                    { time: "10:15-11:15", location: "嚴島神社", note: "海上大鳥居 (渡輪會繞行靠近)", type: "sightseeing" },
+                    { time: "11:50-12:50", location: "表參道商店街 / 午餐", note: "みやじま食堂 (牡蠣飯定食¥1000左右)", type: "dining" },
+                    { time: "13:00-14:20", location: "宮島纜車 / 彌山頂部", note: "如排隊時間長，可考慮放棄大聖院或縮短購物時間", type: "sightseeing" },
+                    { time: "14:20-15:20", location: "大聖院", note: "", type: "sightseeing" },
+                    { time: "15:47-16:14", location: "宮島口站-廣島站", note: "JR", type: "transport" },
+                    { time: "16:30-17:00", location: "廣島站-福山站", note: "新幹線", type: "transport" },
+                    { time: "晚上", location: "福山站-岡山站", note: "先至飯店取行李，再搭新幹線", type: "transport" },
+                    { time: "Check-in", location: "大和Roynet飯店-岡山站前", note: "", type: "stay" },
+                ]
+            },
+            {
+                date: "12/5(五)",
+                theme: "神戶",
+                city: "神戶",
+                events: [
+                    { time: "08:29-09:00", location: "岡山站-新神戶車站", note: "", type: "transport" },
+                    { time: "09:00-12:00", location: "北野異人館街", note: "風見雞館和萌黃之館最具代表性", type: "sightseeing" },
+                    { time: "13:00-13:30", location: "生田神社", note: "", type: "sightseeing" },
+                    { time: "13:30-15:30", location: "南京町", note: "午餐：龍鳳酒家(廣東風排骨飯牛腩飯)", type: "dining" },
+                    { time: "15:30-16:30", location: "美利堅公園", note: "看港口夜景、神戶港塔、BE KOBE 打卡點。", type: "sightseeing" },
+                    { time: "晚餐", location: "神戶牛Steakland Kobe-kan", note: "步行到「元町站」10-15 分鐘，元町附近吃晚餐神戶牛", type: "dining" },
+                    { time: "18:30-19:05", location: "新神戶站-岡山站", note: "JR山陽新幹線 (35分鐘)", type: "transport" },
+                ]
+            },
+            {
+                date: "12/6(六)",
+                theme: "岡山&倉敷",
+                city: "岡山・倉敷",
+                events: [
+                    { time: "08:36-08:54", location: "岡山 吉備津站", note: "JR吉備線 (18分鐘)。每小時1班", type: "transport" },
+                    { time: "09:10-10:30", location: "吉備津神社", note: "桃太郎傳說相關", type: "sightseeing" },
+                    { time: "10:46-11:19", location: "吉備津站-岡山站-倉敷站", note: "JR吉備線轉JR山陽本線", type: "transport" },
+                    { time: "11:40-14:40", location: "倉敷美觀 / 午餐", note: "常右衛門食堂 (家庭風定食約999元以下)", type: "dining" }, 
+                    { time: "14:40-15:00", location: "阿智神社", note: "倉敷美觀地區步行190公尺", type: "sightseeing" },
+                    { time: "15:00-16:00", location: "林源十郎商店", note: "可至三樓展望台", type: "sightseeing" },
+                    { time: "晚上", location: "倉敷夜景", note: "林源十郎商店三樓展望台 / 倉敷川沿岸夜間點燈", type: "sightseeing" },
+                    { time: "購物", location: "三井OUTLET PARK 倉敷", type: "sightseeing" },
+                    { time: "晚餐", location: "常盤食堂 (~999 日圓家常風煮魚/燒魚定食)", type: "dining" },
+                    { time: "晚上", location: "倉敷站-岡山站", note: "車程16分鐘", type: "transport" },
+                ]
+            },
+            {
+                date: "12/7(日)",
+                theme: "岡山/返國",
+                city: "岡山",
+                events: [
+                    { time: "08:00-10:30", location: "岡山後樂園 + 岡山城外觀", note: "日本三大名園之一", type: "sightseeing" },
+                    { time: "10:45-11:05", location: "後樂園-飯店", note: "步行+取行李", type: "transport" },
+                    { time: "11:15-12:15", location: "午餐 (岡山車站內或地下街)", note: "岡山一番街或SANSUTE 岡山", type: "dining" },
+                    { time: "12:40-13:10", location: "岡山車站巴士站-岡山機場", note: "2號巴士月台搭乘12:40班次", type: "transport" },
+                    { time: "15:25", location: "搭飛機", note: "國際線需提前2.5小時到場", type: "transport" },
+                ]
+            },
+        ];
+
+        // 住宿資訊數據 
+        const accommodationData = [
+            { 
+                checkIn: "2025/11/29", checkOut: "2025/11/30", 
+                name: "高松站前超級旅館 (Hyper-inn Takamatsu Ekimae)", 
+                platform: "AOGDA", booker: "PEILING LIAO", 
+                note: "無" 
+            },
+            { 
+                checkIn: "2025/11/30", checkOut: "2025/12/01", 
+                name: "高松fav 高松飯店 (fav TAKAMATSU)", 
+                platform: "Agoda", booker: "SHU-YU HSIEH", 
+                note: "無" 
+            },
+            { 
+                checkIn: "2025/12/01", checkOut: "2025/12/04", 
+                name: "福山站前大和ROYNET酒店 (Daiwa Roynet Hotel Fukuyama-Ekimae)", 
+                platform: "Trip.com", booker: "LIAO PEILING", 
+                note: "無" 
+            },
+            { 
+                checkIn: "2025/12/04", checkOut: "2025/12/06", 
+                name: "岡山站前大和ROYNET飯店 (Daiwa Roynet Hotel Okayama-Ekimae)", 
+                platform: "AOGDA", booker: "PEILING LIAO", 
+                note: "房型：三人房 (Triple Room)" 
+            },
+            { 
+                checkIn: "2025/12/06", checkOut: "2025/12/07", 
+                name: "岡山站前大和ROYNET飯店 (Daiwa Roynet Hotel Okayama-Ekimae)", 
+                platform: "KLOOK", booker: "PEILING LIAO", 
+                note: "房型：雙床/雙人房 (2間) (Twin/Double Room)" 
+            }
+        ];
+        
+        // 班機資訊數據
+        const flightData = [
+            {
+                type: "去程",
+                flightNo: "IT 214",
+                airline: "tigersmart",
+                duration: "2小時 25分",
+                departureTime: "11:10",
+                departureCity: "TPE (台北(桃園))",
+                arrivalTime: "14:35",
+                arrivalCity: "OKJ (岡山)",
+            },
+            {
+                type: "回程",
+                flightNo: "IT 215",
+                airline: "tigersmart",
+                duration: "3小時 5分",
+                departureTime: "15:25",
+                departureCity: "OKJ (岡山)",
+                arrivalTime: "17:30",
+                arrivalCity: "TPE (台北(桃園))",
+            }
+        ];
+
+        let activeView = itineraryData[1].date; // 預設第二天
+
+        const typeStyles = {
+            'sightseeing': { label: '景點', bg: 'bg-teal-50', border: 'border-teal-500', ring: 'bg-teal-500 ring-teal-100' },
+            'dining': { label: '餐廳', bg: 'bg-red-50', border: 'border-red-500', ring: 'bg-red-500 ring-red-100' },
+            'transport': { label: '交通', bg: 'bg-indigo-50', border: 'border-indigo-500', ring: 'bg-indigo-500 ring-indigo-100' },
+            'stay': { label: '住宿', bg: 'bg-orange-50', border: 'border-orange-500', ring: 'bg-orange-500 ring-orange-100' },
+            'activity': { label: '活動/購物', bg: 'bg-yellow-50', border: 'border-yellow-500', ring: 'bg-yellow-500 ring-yellow-100' }
+        };
+        
+        function canInteract() { return false; }
+        function handleDragStart(e) {}
+        function handleDragOver(e) {}
+        function handleDrop(e) {}
+        function handleDragEnd(e) {}
+        function toggleEdit(element, eventIndex, field) {}
+        function deleteEvent(eventIndex) {}
+        function setupEventListeners(contentContainer) {}
+
+
+        // --- 渲染導覽列 ---
+
+        function renderDateNav() {
+            const navContainer = document.getElementById('date-nav');
+            navContainer.innerHTML = '';
+            
+            // 1. 班機資訊按鈕
+            const isFlightActive = activeView === 'FLIGHTS';
+            const flightButton = document.createElement('button');
+            flightButton.setAttribute('data-view', 'FLIGHTS');
+            flightButton.onclick = () => selectView('FLIGHTS');
+            
+            // 勝色(Kachi-iro) 深藍
+            flightButton.className = `
+                flex-shrink-0 w-24 md:w-28 p-2 md:p-3 rounded transition-all duration-300
+                ${isFlightActive
+                    ? 'bg-[#2e4b71] text-white shadow-md' 
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                }
+            `;
+            flightButton.innerHTML = `
+                <div class="text-base md:text-lg font-serif-jp">✈️</div> 
+                <div class="text-sm md:text-base font-medium mt-1 font-serif-jp">班機</div> 
+            `;
+            navContainer.appendChild(flightButton);
+
+
+            // 2. 住宿資訊按鈕
+            const isAccommodationActive = activeView === 'ACCOMMODATION';
+            const accButton = document.createElement('button');
+            accButton.setAttribute('data-view', 'ACCOMMODATION');
+            accButton.onclick = () => selectView('ACCOMMODATION');
+            
+            // 鉛丹色 (Entan) 紅橘
+            accButton.className = `
+                flex-shrink-0 w-24 md:w-28 p-2 md:p-3 rounded transition-all duration-300
+                ${isAccommodationActive
+                    ? 'bg-[#d65a31] text-white shadow-md' 
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                }
+            `;
+            accButton.innerHTML = `
+                <div class="text-base md:text-lg font-serif-jp">🏠</div> 
+                <div class="text-sm md:text-base font-medium mt-1 font-serif-jp">住宿</div> 
+            `;
+            navContainer.appendChild(accButton);
+
+
+            // 3. 日期行程按鈕
+            itineraryData.forEach(day => {
+                const isActive = day.date === activeView;
+                
+                const dateParts = day.date.split('(');
+                const date = dateParts[0]; 
+                const weekDay = dateParts[1].replace(')', ''); 
+
+                const button = document.createElement('button');
+                button.setAttribute('data-view', day.date);
+                button.onclick = () => selectView(day.date);
+
+                const cityLabel = day.city.split('・')[0];
+
+                button.className = `
+                    flex-shrink-0 w-24 md:w-28 p-2 md:p-3 rounded transition-all duration-300
+                    ${isActive 
+                        ? 'bg-[#4b5563] text-white shadow-md' // 炭灰色
+                        : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                    }
+                `;
+
+                button.innerHTML = `
+                    <div class="text-xs md:text-sm font-medium ${isActive ? 'text-gray-300' : 'text-gray-400'} truncate font-serif-jp">${cityLabel}</div>
+                    <div class="text-lg md:text-xl font-bold mt-1 font-serif-jp">${date}</div> 
+                    <div class="text-sm md:text-base ${isActive ? 'font-light' : 'font-medium'}">週${weekDay}</div> 
+                `;
+
+                navContainer.appendChild(button);
+            });
+
+            const activeElement = navContainer.querySelector(`[data-view="${activeView}"]`);
+            if (activeElement) {
+                setTimeout(() => {
+                    activeElement.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                }, 100);
+            }
+        }
+
+        /**
+         * 渲染班機內容 - 日式風格 (極簡、宋體標題、深藍色系)
+         */
+        function renderFlightContent() {
+            const contentContainer = document.getElementById('itinerary-content');
+            let html = `
+                <div class="p-2 mb-4 mt-2 text-center">
+                    <h2 class="text-2xl md:text-3xl font-serif-jp font-bold text-[#2e4b71] tracking-widest border-b-2 border-[#2e4b71] inline-block pb-2">班機資訊</h2>
+                    <p class="text-sm md:text-base text-gray-500 mt-3 font-serif-jp">請注意：國際線需提前2.5小時到場。</p>
+                </div>
+                <div class="space-y-6">
+            `;
+
+            flightData.forEach((flight, index) => {
+                // 勝色 (Kachi-iro) 深藍 與 蘇芳色 (Suoh) 暗紅 區分去回程
+                const themeColor = flight.type === '去程' ? 'border-[#2e4b71]' : 'border-[#9e3a3a]';
+                const textColor = flight.type === '去程' ? 'text-[#2e4b71]' : 'text-[#9e3a3a]';
+                const iconBg = flight.type === '去程' ? 'bg-[#2e4b71]' : 'bg-[#9e3a3a]';
+
+                html += `
+                    <div class="bg-washi p-0 rounded-sm shadow-sm relative overflow-hidden group">
+                        <!-- 裝飾性左側邊條 -->
+                        <div class="absolute left-0 top-0 bottom-0 w-1.5 ${iconBg}"></div>
+
+                        <div class="p-5 md:p-6 pl-7">
+                            <div class="flex justify-between items-baseline border-b border-dashed border-gray-300 pb-3 mb-4">
+                                <h3 class="text-xl md:text-2xl font-serif-jp font-bold ${textColor} tracking-wider">
+                                    <span class="inline-block px-2 py-0.5 text-sm text-white ${iconBg} align-middle mr-2 rounded-sm" style="font-family: 'Noto Serif TC';">${flight.type}</span>
+                                    ${flight.flightNo}
+                                </h3>
+                                <span class="text-sm md:text-base text-gray-500 font-serif-jp tracking-wide">${flight.airline}</span>
+                            </div>
+                            
+                            <div class="space-y-6">
+                                <!-- 行程時間軸呈現 -->
+                                <div class="relative flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                                    
+                                    <!-- 起飛 -->
+                                    <div class="flex-1">
+                                        <div class="text-xs text-gray-400 font-serif-jp mb-1 tracking-widest">DEPARTURE</div>
+                                        <div class="font-mono text-3xl md:text-4xl font-bold text-gray-800">${flight.departureTime}</div>
+                                        <div class="text-base text-gray-600 mt-1 font-serif-jp">${flight.departureCity}</div>
+                                    </div>
+
+                                    <!-- 飛行時間 (中間裝飾) -->
+                                    <div class="hidden md:flex flex-col items-center justify-center w-32">
+                                        <div class="text-xs text-gray-400 mb-1">${flight.duration}</div>
+                                        <div class="w-full h-px bg-gray-300 relative">
+                                            <div class="absolute right-0 -top-1 w-2 h-2 bg-gray-300 rounded-full"></div>
+                                        </div>
+                                        <div class="text-xl mt-1 text-gray-300">✈</div>
+                                    </div>
+
+                                    <!-- 抵達 -->
+                                    <div class="flex-1 md:text-right">
+                                        <div class="text-xs text-gray-400 font-serif-jp mb-1 tracking-widest">ARRIVAL</div>
+                                        <div class="font-mono text-3xl md:text-4xl font-bold text-gray-800">${flight.arrivalTime}</div>
+                                        <div class="text-base text-gray-600 mt-1 font-serif-jp">${flight.arrivalCity}</div>
+                                    </div>
+                                    
+                                    <!-- 手機版飛行時間 -->
+                                    <div class="md:hidden w-full border-t border-dashed border-gray-200 pt-3 text-sm text-gray-500">
+                                        ⏱️ 飛行時間: <span class="font-mono">${flight.duration}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += `</div>`;
+            contentContainer.innerHTML = html;
+        }
+
+
+        /**
+         * 渲染住宿內容 - 日式旅館風格 (暖色系、卡片式)
+         */
+        function renderAccommodationContent() {
+            const contentContainer = document.getElementById('itinerary-content');
+            let html = `
+                <div class="p-2 mb-4 mt-2 text-center">
+                    <h2 class="text-2xl md:text-3xl font-serif-jp font-bold text-[#d65a31] tracking-widest border-b-2 border-[#d65a31] inline-block pb-2">住宿資訊</h2>
+                </div>
+                <div class="space-y-6">
+            `;
+
+            accommodationData.forEach((hotel, index) => {
+                const noteContent = hotel.note && hotel.note !== '無' ? hotel.note : '無特別備註';
+
+                html += `
+                    <div class="bg-washi rounded-sm shadow-sm border border-gray-100 relative overflow-hidden">
+                        <!-- 頂部裝飾條 -->
+                        <div class="h-1 w-full bg-[#d65a31] opacity-80"></div>
+                        
+                        <div class="p-5 md:p-6">
+                            <h3 class="text-xl md:text-2xl font-serif-jp font-bold text-gray-800 leading-snug mb-4">
+                                ${hotel.name}
+                            </h3>
+                            
+                            <div class="grid grid-cols-1 gap-4 text-gray-700">
+                                <div class="flex flex-col bg-white p-3 border border-gray-100 rounded-sm">
+                                    <span class="text-xs text-[#d65a31] font-serif-jp mb-1 tracking-wider">入住期間</span>
+                                    <div class="font-mono text-lg md:text-xl font-medium">
+                                        ${hotel.checkIn} <span class="text-gray-300 mx-2">/</span> ${hotel.checkOut}
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center justify-between text-sm md:text-base px-1">
+                                    <div>
+                                        <span class="text-gray-400 mr-2 font-serif-jp">預訂平台</span>
+                                        <span class="font-medium">${hotel.platform}</span>
+                                    </div>
+                                    <div>
+                                        <span class="text-gray-400 mr-2 font-serif-jp">預訂者</span>
+                                        <span class="font-medium">${hotel.booker}</span>
+                                    </div>
+                                </div>
+
+                                <div class="mt-2 pt-3 border-t border-dashed border-gray-300">
+                                    <span class="text-xs text-gray-400 block mb-2 font-serif-jp">備註事項</span>
+                                    <p class="text-sm md:text-base text-gray-600 leading-relaxed bg-[#f2f4f6] p-3 rounded-sm font-light">
+                                        ${noteContent}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += `</div>`;
+            contentContainer.innerHTML = html;
+        }
+
+        /**
+         * 渲染當日行程內容 (維持原優化版，但套用全域字體變更)
+         */
+        function renderItineraryContent(date) {
+            const contentContainer = document.getElementById('itinerary-content');
+            const dayData = itineraryData.find(d => d.date === date);
+
+            if (!dayData) {
+                contentContainer.innerHTML = `<div class="text-center p-8 text-lg text-gray-500 font-serif-jp">找不到 ${date} 的行程資訊。</div>`;
+                return;
+            }
+
+            const fullDate = dayData.date; 
+            const dateParts = fullDate.split('(');
+            const dateOnly = dateParts[0]; 
+            const weekDayOnly = dateParts[1].replace(')', ''); 
+
+            let html = `
+                <div class="p-2 mb-4 mt-2">
+                    <h2 class="text-xl md:text-2xl font-serif-jp font-bold text-gray-800 border-l-4 border-indigo-700 pl-3">${dateOnly} <span class="text-base font-normal text-gray-500 ml-1">(週${weekDayOnly})</span></h2> 
+                    <p class="text-base md:text-lg text-indigo-700 font-medium pl-4 mt-1 font-serif-jp">${dayData.theme} &middot; ${dayData.city}</p> 
+                </div>
+                <div class="space-y-0">
+            `;
+
+
+            // 行程時間軸
+            dayData.events.forEach((event, index) => {
+                const type = event.type || 'transport';
+                const styles = typeStyles[type] || typeStyles['transport']; 
+                
+                html += `
+                    <div class="flex relative itinerary-item" data-index="${index}">
+                        
+                        <div class="flex-shrink-0 time-column pt-3"> 
+                            <div class="text-sm md:text-xl font-mono font-bold text-gray-600 inline-block px-1 py-0.5 rounded">
+                                ${event.time}
+                            </div>
+                            
+                            <div class="timeline-dot ${styles.ring} rounded-full ring-2 md:ring-4 z-10 shadow-sm bg-white"></div>
+                        </div>
+
+                        <div class="timeline-line"></div>
+                        
+                        <div class="flex-grow pb-6 pl-4 md:pb-8 md:pl-8"> 
+                            <div class="${styles.bg} p-3 md:p-5 rounded-sm shadow-sm border-l-2 ${styles.border} timeline-card bg-opacity-60"> 
+                                <div class="flex flex-col">
+                                    <div class="flex items-start justify-between relative">
+                                        <p class="text-lg md:text-xl font-bold text-gray-800 mr-2 leading-snug tracking-wide">
+                                            ${event.location}
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="mt-2 pt-2 md:mt-3 md:pt-3 border-t border-dashed border-gray-200 w-full flex flex-col md:flex-row md:justify-between md:items-end gap-2">
+                                        ${event.note && event.note !== '點擊新增備註' ? `
+                                            <p class="text-sm md:text-base text-gray-600 leading-relaxed w-full">
+                                                ${event.note}
+                                            </p>
+                                        ` : `
+                                            <p class="text-sm md:text-base text-gray-400 leading-relaxed w-full italic">
+                                                無備註
+                                            </p>
+                                        `}
+
+                                        <span class="self-start md:self-auto flex-shrink-0 text-xs md:text-sm font-medium px-2 py-0.5 rounded-sm border ${styles.border.replace('border-', 'text-')} bg-white/80">
+                                            ${styles.label}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += `</div>`;
+            contentContainer.innerHTML = html;
+        }
+
+        function selectView(view) {
+            if (activeView !== view) {
+                activeView = view;
+                renderDateNav();
+                
+                if (view === 'ACCOMMODATION') {
+                    renderAccommodationContent();
+                } else if (view === 'FLIGHTS') {
+                    renderFlightContent();
+                } 
+                else {
+                    renderItineraryContent(activeView);
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (itineraryData.length > 0) {
+                activeView = itineraryData[1].date; 
+                renderDateNav();
+                renderItineraryContent(activeView);
+            }
+        });
+    </script>
+</body>
+</html>
