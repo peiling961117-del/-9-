@@ -1,7 +1,7 @@
 <html lang="zh-Hant"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>日本之旅行程 (完整介紹版)</title>
+    <title>日本之旅行程 (按鈕置頂版)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@500;700&family=Roboto+Mono:wght@400;700&display=swap');
@@ -51,30 +51,7 @@
             transform: scale(0.98);
         }
 
-        /* 浮動按鈕樣式 */
-        .fab-container {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            z-index: 50;
-        }
-        .fab-btn {
-            width: 3.5rem;
-            height: 3.5rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            transition: all 0.2s;
-            font-size: 1.5rem;
-            border: none;
-            cursor: pointer;
-        }
-        .fab-btn:active { transform: scale(0.95); }
+        /* 移除原本的浮動按鈕樣式，改用 Tailwind Utility */
 
         .time-column { width: 60px; text-align: right; padding-right: 0.75rem; position: relative; z-index: 1; flex-shrink: 0; }
         @media (min-width: 768px) { .time-column { width: 80px; padding-right: 1.5rem; } }
@@ -93,329 +70,33 @@
             background-image: url("data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 4 4' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3h1v1H1V3zm2-2h1v1H3V1z' fill='%23dcdcdc' fill-opacity='0.15' fill-rule='evenodd'/%3E%3C/svg%3E");
         }
     </style>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.right-3{right:0.75rem}.top-3{top:0.75rem}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mx-2{margin-left:0.5rem;margin-right:0.5rem}.mb-1{margin-bottom:0.25rem}.mt-1{margin-top:0.25rem}.mb-4{margin-bottom:1rem}.ml-1{margin-left:0.25rem}.mr-2{margin-right:0.5rem}.mt-2{margin-top:0.5rem}.mb-2{margin-bottom:0.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-8{height:2rem}.h-\[85px\]{height:85px}.h-1{height:0.25rem}.max-h-\[80vh\]{max-height:80vh}.max-h-\[90vh\]{max-height:90vh}.min-h-screen{min-height:100vh}.w-8{width:2rem}.w-full{width:100%}.w-24{width:6rem}.max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}.flex-shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-row{flex-direction:row}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-0 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.self-start{align-self:flex-start}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.whitespace-pre-wrap{white-space:pre-wrap}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-sm{border-radius:0.125rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-l-2{border-left-width:2px}.border-l-4{border-left-width:4px}.border-b-2{border-bottom-width:2px}.border-dashed{border-style:dashed}.border-gray-100{--tw-border-opacity:1;border-color:rgb(243 244 246 / var(--tw-border-opacity, 1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-indigo-200{--tw-border-opacity:1;border-color:rgb(199 210 254 / var(--tw-border-opacity, 1))}.border-indigo-500{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.border-indigo-700{--tw-border-opacity:1;border-color:rgb(67 56 202 / var(--tw-border-opacity, 1))}.border-orange-500{--tw-border-opacity:1;border-color:rgb(249 115 22 / var(--tw-border-opacity, 1))}.border-red-500{--tw-border-opacity:1;border-color:rgb(239 68 68 / var(--tw-border-opacity, 1))}.border-teal-500{--tw-border-opacity:1;border-color:rgb(20 184 166 / var(--tw-border-opacity, 1))}.border-yellow-500{--tw-border-opacity:1;border-color:rgb(234 179 8 / var(--tw-border-opacity, 1))}.border-\[\#d65a31\]{--tw-border-opacity:1;border-color:rgb(214 90 49 / var(--tw-border-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-teal-50{--tw-bg-opacity:1;background-color:rgb(240 253 250 / var(--tw-bg-opacity, 1))}.bg-teal-500{--tw-bg-opacity:1;background-color:rgb(20 184 166 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/95{background-color:rgb(255 255 255 / 0.95)}.bg-\[\#4b5563\]{--tw-bg-opacity:1;background-color:rgb(75 85 99 / var(--tw-bg-opacity, 1))}.bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.bg-orange-500{--tw-bg-opacity:1;background-color:rgb(249 115 22 / var(--tw-bg-opacity, 1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.bg-white\/80{background-color:rgb(255 255 255 / 0.8)}.bg-yellow-50{--tw-bg-opacity:1;background-color:rgb(254 252 232 / var(--tw-bg-opacity, 1))}.bg-yellow-500{--tw-bg-opacity:1;background-color:rgb(234 179 8 / var(--tw-bg-opacity, 1))}.bg-\[\#d65a31\]{--tw-bg-opacity:1;background-color:rgb(214 90 49 / var(--tw-bg-opacity, 1))}.bg-\[\#f2f4f6\]{--tw-bg-opacity:1;background-color:rgb(242 244 246 / var(--tw-bg-opacity, 1))}.bg-opacity-50{--tw-bg-opacity:0.5}.bg-opacity-60{--tw-bg-opacity:0.6}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-5{padding:1.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.pb-10{padding-bottom:2.5rem}.pt-3{padding-top:0.75rem}.pb-6{padding-bottom:1.5rem}.pl-3{padding-left:0.75rem}.pl-4{padding-left:1rem}.pr-6{padding-right:1.5rem}.pt-2{padding-top:0.5rem}.pb-2{padding-bottom:0.5rem}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-light{font-weight:300}.font-normal{font-weight:400}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.leading-snug{line-height:1.375}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-indigo-500{--tw-text-opacity:1;color:rgb(99 102 241 / var(--tw-text-opacity, 1))}.text-orange-500{--tw-text-opacity:1;color:rgb(249 115 22 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-teal-500{--tw-text-opacity:1;color:rgb(20 184 166 / var(--tw-text-opacity, 1))}.text-yellow-500{--tw-text-opacity:1;color:rgb(234 179 8 / var(--tw-text-opacity, 1))}.text-\[\#d65a31\]{--tw-text-opacity:1;color:rgb(214 90 49 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.opacity-80{opacity:0.8}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-indigo-100{--tw-ring-opacity:1;--tw-ring-color:rgb(224 231 255 / var(--tw-ring-opacity, 1))}.ring-orange-100{--tw-ring-opacity:1;--tw-ring-color:rgb(255 237 213 / var(--tw-ring-opacity, 1))}.ring-red-100{--tw-ring-opacity:1;--tw-ring-color:rgb(254 226 226 / var(--tw-ring-opacity, 1))}.ring-teal-100{--tw-ring-opacity:1;--tw-ring-color:rgb(204 251 241 / var(--tw-ring-opacity, 1))}.ring-yellow-100{--tw-ring-opacity:1;--tw-ring-color:rgb(254 249 195 / var(--tw-ring-opacity, 1))}.ring-blue-300{--tw-ring-opacity:1;--tw-ring-color:rgb(147 197 253 / var(--tw-ring-opacity, 1))}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-50:hover{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-700:hover{--tw-bg-opacity:1;background-color:rgb(55 65 81 / var(--tw-bg-opacity, 1))}.hover\:bg-green-700:hover{--tw-bg-opacity:1;background-color:rgb(21 128 61 / var(--tw-bg-opacity, 1))}.hover\:text-gray-600:hover{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.focus\:border-blue-500:focus{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.focus\:border-indigo-500:focus{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241 / var(--tw-ring-opacity, 1))}@media (min-width: 768px){.md\:mt-3{margin-top:0.75rem}.md\:h-\[96px\]{height:96px}.md\:w-28{width:7rem}.md\:flex-row{flex-direction:row}.md\:items-end{align-items:flex-end}.md\:justify-between{justify-content:space-between}.md\:self-auto{align-self:auto}.md\:p-4{padding:1rem}.md\:p-3{padding:0.75rem}.md\:p-5{padding:1.25rem}.md\:p-6{padding:1.5rem}.md\:pb-8{padding-bottom:2rem}.md\:pl-8{padding-left:2rem}.md\:pt-3{padding-top:0.75rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:ring-4{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.right-3{right:0.75rem}.top-0{top:0px}.top-3{top:0.75rem}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mx-2{margin-left:0.5rem;margin-right:0.5rem}.mb-1{margin-bottom:0.25rem}.mb-4{margin-bottom:1rem}.ml-1{margin-left:0.25rem}.mr-2{margin-right:0.5rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mb-2{margin-bottom:0.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-8{height:2rem}.h-\[85px\]{height:85px}.h-1{height:0.25rem}.max-h-\[80vh\]{max-height:80vh}.max-h-\[90vh\]{max-height:90vh}.min-h-screen{min-height:100vh}.w-24{width:6rem}.w-8{width:2rem}.w-full{width:100%}.max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}.flex-shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-row{flex-direction:row}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-0 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.self-start{align-self:flex-start}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.whitespace-pre-wrap{white-space:pre-wrap}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-sm{border-radius:0.125rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-l-2{border-left-width:2px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-b-2{border-bottom-width:2px}.border-dashed{border-style:dashed}.border-gray-100{--tw-border-opacity:1;border-color:rgb(243 244 246 / var(--tw-border-opacity, 1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-indigo-200{--tw-border-opacity:1;border-color:rgb(199 210 254 / var(--tw-border-opacity, 1))}.border-indigo-500{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.border-indigo-700{--tw-border-opacity:1;border-color:rgb(67 56 202 / var(--tw-border-opacity, 1))}.border-red-500{--tw-border-opacity:1;border-color:rgb(239 68 68 / var(--tw-border-opacity, 1))}.border-teal-500{--tw-border-opacity:1;border-color:rgb(20 184 166 / var(--tw-border-opacity, 1))}.border-orange-500{--tw-border-opacity:1;border-color:rgb(249 115 22 / var(--tw-border-opacity, 1))}.border-yellow-500{--tw-border-opacity:1;border-color:rgb(234 179 8 / var(--tw-border-opacity, 1))}.border-\[\#d65a31\]{--tw-border-opacity:1;border-color:rgb(214 90 49 / var(--tw-border-opacity, 1))}.bg-\[\#4b5563\]{--tw-bg-opacity:1;background-color:rgb(75 85 99 / var(--tw-bg-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.bg-teal-50{--tw-bg-opacity:1;background-color:rgb(240 253 250 / var(--tw-bg-opacity, 1))}.bg-teal-500{--tw-bg-opacity:1;background-color:rgb(20 184 166 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/80{background-color:rgb(255 255 255 / 0.8)}.bg-white\/95{background-color:rgb(255 255 255 / 0.95)}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.bg-orange-500{--tw-bg-opacity:1;background-color:rgb(249 115 22 / var(--tw-bg-opacity, 1))}.bg-yellow-50{--tw-bg-opacity:1;background-color:rgb(254 252 232 / var(--tw-bg-opacity, 1))}.bg-yellow-500{--tw-bg-opacity:1;background-color:rgb(234 179 8 / var(--tw-bg-opacity, 1))}.bg-\[\#d65a31\]{--tw-bg-opacity:1;background-color:rgb(214 90 49 / var(--tw-bg-opacity, 1))}.bg-\[\#f2f4f6\]{--tw-bg-opacity:1;background-color:rgb(242 244 246 / var(--tw-bg-opacity, 1))}.bg-opacity-50{--tw-bg-opacity:0.5}.bg-opacity-60{--tw-bg-opacity:0.6}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-5{padding:1.25rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-10{padding-bottom:2.5rem}.pb-6{padding-bottom:1.5rem}.pl-3{padding-left:0.75rem}.pl-4{padding-left:1rem}.pr-6{padding-right:1.5rem}.pt-2{padding-top:0.5rem}.pt-3{padding-top:0.75rem}.pb-2{padding-bottom:0.5rem}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-light{font-weight:300}.font-medium{font-weight:500}.font-normal{font-weight:400}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-indigo-500{--tw-text-opacity:1;color:rgb(99 102 241 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-teal-500{--tw-text-opacity:1;color:rgb(20 184 166 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-orange-500{--tw-text-opacity:1;color:rgb(249 115 22 / var(--tw-text-opacity, 1))}.text-yellow-500{--tw-text-opacity:1;color:rgb(234 179 8 / var(--tw-text-opacity, 1))}.text-\[\#d65a31\]{--tw-text-opacity:1;color:rgb(214 90 49 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.opacity-80{opacity:0.8}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-indigo-100{--tw-ring-opacity:1;--tw-ring-color:rgb(224 231 255 / var(--tw-ring-opacity, 1))}.ring-red-100{--tw-ring-opacity:1;--tw-ring-color:rgb(254 226 226 / var(--tw-ring-opacity, 1))}.ring-teal-100{--tw-ring-opacity:1;--tw-ring-color:rgb(204 251 241 / var(--tw-ring-opacity, 1))}.ring-orange-100{--tw-ring-opacity:1;--tw-ring-color:rgb(255 237 213 / var(--tw-ring-opacity, 1))}.ring-yellow-100{--tw-ring-opacity:1;--tw-ring-color:rgb(254 249 195 / var(--tw-ring-opacity, 1))}.ring-blue-300{--tw-ring-opacity:1;--tw-ring-color:rgb(147 197 253 / var(--tw-ring-opacity, 1))}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-50:hover{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-700:hover{--tw-bg-opacity:1;background-color:rgb(55 65 81 / var(--tw-bg-opacity, 1))}.hover\:bg-green-700:hover{--tw-bg-opacity:1;background-color:rgb(21 128 61 / var(--tw-bg-opacity, 1))}.hover\:text-gray-600:hover{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.focus\:border-blue-500:focus{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.focus\:border-indigo-500:focus{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241 / var(--tw-ring-opacity, 1))}@media (min-width: 768px){.md\:mt-3{margin-top:0.75rem}.md\:h-\[96px\]{height:96px}.md\:w-28{width:7rem}.md\:flex-row{flex-direction:row}.md\:items-end{align-items:flex-end}.md\:justify-between{justify-content:space-between}.md\:self-auto{align-self:auto}.md\:p-3{padding:0.75rem}.md\:p-4{padding:1rem}.md\:p-5{padding:1.25rem}.md\:p-6{padding:1.5rem}.md\:pb-8{padding-bottom:2rem}.md\:pl-8{padding-left:2rem}.md\:pt-3{padding-top:0.75rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:ring-4{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}}</style></head>
+</head>
 <body class="min-h-screen">
 
     <div id="app" class="max-w-xl mx-auto bg-white min-h-screen shadow-lg pb-10 relative">
 
-        <header class="sticky top-0 z-20 bg-white border-b border-gray-200 p-3 md:p-4 shadow-sm h-[85px] md:h-[96px] flex flex-col justify-center">
-            <h1 class="text-2xl md:text-3xl font-serif-jp font-bold text-gray-800 text-center tracking-wide">日本行程總覽</h1>
-            <p class="text-sm md:text-base text-gray-500 text-center mt-1 font-serif-jp">瀨戶內海 (共9日)</p>
+        <header class="sticky top-0 z-20 bg-white border-b border-gray-200 shadow-sm h-[85px] md:h-[96px] flex items-center justify-center relative px-2">
+            <div class="flex flex-col items-center">
+                <h1 class="text-xl md:text-3xl font-serif-jp font-bold text-gray-800 text-center tracking-wide">日本行程總覽</h1>
+                <p class="text-xs md:text-base text-gray-500 text-center mt-1 font-serif-jp">瀨戶內海 (共9日)</p>
+            </div>
+
+            <div class="absolute right-3 md:right-5 top-1/2 -translate-y-1/2 flex gap-2">
+                <button id="edit-btn" onclick="toggleEditMode()" class="w-10 h-10 rounded-full bg-white text-gray-700 border border-gray-200 shadow-sm flex items-center justify-center text-lg hover:bg-gray-50 active:scale-95 transition-all" title="進入編輯模式">
+                    ✏️
+                </button>
+                <button id="save-btn" onclick="downloadHTML()" class="w-10 h-10 rounded-full bg-green-600 text-white shadow-sm flex items-center justify-center text-lg hover:bg-green-700 active:scale-95 transition-all" title="下載並儲存檔案">
+                    💾
+                </button>
+            </div>
         </header>
         
-        <nav id="date-nav" class="no-scrollbar sticky z-10 bg-white/95 backdrop-blur-sm border-b border-gray-200 overflow-x-auto flex flex-row p-2 space-x-2"><button data-view="FLIGHTS" class="
-                flex-shrink-0 w-24 md:w-28 p-2 md:p-3 rounded transition-all duration-300
-                bg-white text-gray-700 hover:bg-gray-50 border border-gray-200
-            ">
-                <div class="text-base md:text-lg font-serif-jp">✈️</div> 
-                <div class="text-sm md:text-base font-medium mt-1 font-serif-jp">班機</div> 
-            </button><button data-view="ACCOMMODATION" class="
-                flex-shrink-0 w-24 md:w-28 p-2 md:p-3 rounded transition-all duration-300
-                bg-white text-gray-700 hover:bg-gray-50 border border-gray-200
-            ">
-                <div class="text-base md:text-lg font-serif-jp">🏠</div> 
-                <div class="text-sm md:text-base font-medium mt-1 font-serif-jp">住宿</div> 
-            </button><button data-view="11/29(六)" class="
-                    flex-shrink-0 w-24 md:w-28 p-2 md:p-3 rounded transition-all duration-300
-                    bg-[#4b5563] text-white shadow-md
-                ">
-                    <div class="text-xs md:text-sm font-medium text-gray-300 truncate font-serif-jp">岡山</div>
-                    <div class="text-lg md:text-xl font-bold mt-1 font-serif-jp">11/29</div> 
-                    <div class="text-sm md:text-base font-light">週六</div> 
-                </button><button data-view="11/30(日)" class="
-                    flex-shrink-0 w-24 md:w-28 p-2 md:p-3 rounded transition-all duration-300
-                    bg-white text-gray-700 hover:bg-gray-50 border border-gray-200
-                ">
-                    <div class="text-xs md:text-sm font-medium text-gray-400 truncate font-serif-jp">小豆島</div>
-                    <div class="text-lg md:text-xl font-bold mt-1 font-serif-jp">11/30</div> 
-                    <div class="text-sm md:text-base font-medium">週日</div> 
-                </button><button data-view="12/1(一)" class="
-                    flex-shrink-0 w-24 md:w-28 p-2 md:p-3 rounded transition-all duration-300
-                    bg-white text-gray-700 hover:bg-gray-50 border border-gray-200
-                ">
-                    <div class="text-xs md:text-sm font-medium text-gray-400 truncate font-serif-jp">高松</div>
-                    <div class="text-lg md:text-xl font-bold mt-1 font-serif-jp">12/1</div> 
-                    <div class="text-sm md:text-base font-medium">週一</div> 
-                </button><button data-view="12/2(二)" class="
-                    flex-shrink-0 w-24 md:w-28 p-2 md:p-3 rounded transition-all duration-300
-                    bg-white text-gray-700 hover:bg-gray-50 border border-gray-200
-                ">
-                    <div class="text-xs md:text-sm font-medium text-gray-400 truncate font-serif-jp">尾道</div>
-                    <div class="text-lg md:text-xl font-bold mt-1 font-serif-jp">12/2</div> 
-                    <div class="text-sm md:text-base font-medium">週二</div> 
-                </button><button data-view="12/3(三)" class="
-                    flex-shrink-0 w-24 md:w-28 p-2 md:p-3 rounded transition-all duration-300
-                    bg-white text-gray-700 hover:bg-gray-50 border border-gray-200
-                ">
-                    <div class="text-xs md:text-sm font-medium text-gray-400 truncate font-serif-jp">廣島</div>
-                    <div class="text-lg md:text-xl font-bold mt-1 font-serif-jp">12/3</div> 
-                    <div class="text-sm md:text-base font-medium">週三</div> 
-                </button><button data-view="12/4(四)" class="
-                    flex-shrink-0 w-24 md:w-28 p-2 md:p-3 rounded transition-all duration-300
-                    bg-white text-gray-700 hover:bg-gray-50 border border-gray-200
-                ">
-                    <div class="text-xs md:text-sm font-medium text-gray-400 truncate font-serif-jp">宮島</div>
-                    <div class="text-lg md:text-xl font-bold mt-1 font-serif-jp">12/4</div> 
-                    <div class="text-sm md:text-base font-medium">週四</div> 
-                </button><button data-view="12/5(五)" class="
-                    flex-shrink-0 w-24 md:w-28 p-2 md:p-3 rounded transition-all duration-300
-                    bg-white text-gray-700 hover:bg-gray-50 border border-gray-200
-                ">
-                    <div class="text-xs md:text-sm font-medium text-gray-400 truncate font-serif-jp">神戶</div>
-                    <div class="text-lg md:text-xl font-bold mt-1 font-serif-jp">12/5</div> 
-                    <div class="text-sm md:text-base font-medium">週五</div> 
-                </button><button data-view="12/6(六)" class="
-                    flex-shrink-0 w-24 md:w-28 p-2 md:p-3 rounded transition-all duration-300
-                    bg-white text-gray-700 hover:bg-gray-50 border border-gray-200
-                ">
-                    <div class="text-xs md:text-sm font-medium text-gray-400 truncate font-serif-jp">岡山</div>
-                    <div class="text-lg md:text-xl font-bold mt-1 font-serif-jp">12/6</div> 
-                    <div class="text-sm md:text-base font-medium">週六</div> 
-                </button><button data-view="12/7(日)" class="
-                    flex-shrink-0 w-24 md:w-28 p-2 md:p-3 rounded transition-all duration-300
-                    bg-white text-gray-700 hover:bg-gray-50 border border-gray-200
-                ">
-                    <div class="text-xs md:text-sm font-medium text-gray-400 truncate font-serif-jp">岡山</div>
-                    <div class="text-lg md:text-xl font-bold mt-1 font-serif-jp">12/7</div> 
-                    <div class="text-sm md:text-base font-medium">週日</div> 
-                </button></nav>
+        <nav id="date-nav" class="no-scrollbar sticky z-10 bg-white/95 backdrop-blur-sm border-b border-gray-200 overflow-x-auto flex flex-row p-2 space-x-2"></nav>
 
-        <main id="itinerary-content" class="p-3 md:p-4">
-                <div class="p-2 mb-4 mt-2">
-                    <h2 class="text-xl md:text-2xl font-serif-jp font-bold text-gray-800 border-l-4 border-indigo-700 pl-3">11/29 <span class="text-base font-normal text-gray-500 ml-1">(週六)</span></h2> 
-                    <p class="text-base md:text-lg text-indigo-700 font-medium pl-4 mt-1 font-serif-jp">岡山/高松 · 岡山・高松</p> 
-                </div>
-                <div class="space-y-0">
-            
-                    <div class="flex relative itinerary-item" data-index="0">
-                        
-                        <div class="flex-shrink-0 time-column pt-3"> 
-                            <div class="text-sm md:text-xl font-mono font-bold text-gray-600 inline-block px-1 py-0.5 rounded">
-                                11:10-14:35
-                            </div>
-                            
-                            <div class="timeline-dot bg-indigo-500 ring-indigo-100 rounded-full ring-2 md:ring-4 z-10 shadow-sm bg-white"></div>
-                        </div>
-
-                        <div class="timeline-line"></div>
-                        
-                        <div class="flex-grow pb-6 pl-4 md:pb-8 md:pl-8"> 
-                            <div onclick="handleCardClick(0, 'transport')" class="bg-indigo-50 p-3 md:p-5 rounded-sm shadow-sm border-l-2 border-indigo-500 timeline-card bg-opacity-60 relative "> 
-                                
-                                <div class="flex flex-col">
-                                    <div class="flex items-start justify-between relative">
-                                        <p class="text-lg md:text-xl font-bold text-gray-800 mr-2 leading-snug tracking-wide pr-6">
-                                            搭飛機
-                                        </p>
-                                    </div>
-                                    
-                                    <div class="mt-2 pt-2 md:mt-3 md:pt-3 border-t border-dashed border-gray-200 w-full flex flex-col md:flex-row md:justify-between md:items-end gap-2">
-                                        
-                                            <p class="text-sm md:text-base text-gray-600 leading-relaxed w-full whitespace-pre-wrap">注意國際線需提前2.5小時到場</p>
-                                        
-
-                                        <span class="self-start md:self-auto flex-shrink-0 text-xs md:text-sm font-medium px-2 py-0.5 rounded-sm border text-indigo-500 bg-white/80">
-                                            交通
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="flex relative itinerary-item" data-index="1">
-                        
-                        <div class="flex-shrink-0 time-column pt-3"> 
-                            <div class="text-sm md:text-xl font-mono font-bold text-gray-600 inline-block px-1 py-0.5 rounded">
-                                16:00-16:30
-                            </div>
-                            
-                            <div class="timeline-dot bg-indigo-500 ring-indigo-100 rounded-full ring-2 md:ring-4 z-10 shadow-sm bg-white"></div>
-                        </div>
-
-                        <div class="timeline-line"></div>
-                        
-                        <div class="flex-grow pb-6 pl-4 md:pb-8 md:pl-8"> 
-                            <div onclick="handleCardClick(1, 'transport')" class="bg-indigo-50 p-3 md:p-5 rounded-sm shadow-sm border-l-2 border-indigo-500 timeline-card bg-opacity-60 relative "> 
-                                
-                                <div class="flex flex-col">
-                                    <div class="flex items-start justify-between relative">
-                                        <p class="text-lg md:text-xl font-bold text-gray-800 mr-2 leading-snug tracking-wide pr-6">
-                                            岡山站 Okayama
-                                        </p>
-                                    </div>
-                                    
-                                    <div class="mt-2 pt-2 md:mt-3 md:pt-3 border-t border-dashed border-gray-200 w-full flex flex-col md:flex-row md:justify-between md:items-end gap-2">
-                                        
-                                            <p class="text-sm md:text-base text-gray-600 leading-relaxed w-full whitespace-pre-wrap">搭乘機場巴士到岡山站(可刷IC卡)，並在岡山站開通 JR PASS</p>
-                                        
-
-                                        <span class="self-start md:self-auto flex-shrink-0 text-xs md:text-sm font-medium px-2 py-0.5 rounded-sm border text-indigo-500 bg-white/80">
-                                            交通
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="flex relative itinerary-item" data-index="2">
-                        
-                        <div class="flex-shrink-0 time-column pt-3"> 
-                            <div class="text-sm md:text-xl font-mono font-bold text-gray-600 inline-block px-1 py-0.5 rounded">
-                                16:40-17:35
-                            </div>
-                            
-                            <div class="timeline-dot bg-indigo-500 ring-indigo-100 rounded-full ring-2 md:ring-4 z-10 shadow-sm bg-white"></div>
-                        </div>
-
-                        <div class="timeline-line"></div>
-                        
-                        <div class="flex-grow pb-6 pl-4 md:pb-8 md:pl-8"> 
-                            <div onclick="handleCardClick(2, 'transport')" class="bg-indigo-50 p-3 md:p-5 rounded-sm shadow-sm border-l-2 border-indigo-500 timeline-card bg-opacity-60 relative "> 
-                                
-                                <div class="flex flex-col">
-                                    <div class="flex items-start justify-between relative">
-                                        <p class="text-lg md:text-xl font-bold text-gray-800 mr-2 leading-snug tracking-wide pr-6">
-                                            高松站 Takamatsu
-                                        </p>
-                                    </div>
-                                    
-                                    <div class="mt-2 pt-2 md:mt-3 md:pt-3 border-t border-dashed border-gray-200 w-full flex flex-col md:flex-row md:justify-between md:items-end gap-2">
-                                        
-                                            <p class="text-sm md:text-base text-gray-600 leading-relaxed w-full whitespace-pre-wrap">往高松班次，車程約1小時。
-建議班次：15:42, 16:13, 16:42, 17:13, 17:42, 18:13</p>
-                                        
-
-                                        <span class="self-start md:self-auto flex-shrink-0 text-xs md:text-sm font-medium px-2 py-0.5 rounded-sm border text-indigo-500 bg-white/80">
-                                            交通
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="flex relative itinerary-item" data-index="3">
-                        
-                        <div class="flex-shrink-0 time-column pt-3"> 
-                            <div class="text-sm md:text-xl font-mono font-bold text-gray-600 inline-block px-1 py-0.5 rounded">
-                                Check-in
-                            </div>
-                            
-                            <div class="timeline-dot bg-orange-500 ring-orange-100 rounded-full ring-2 md:ring-4 z-10 shadow-sm bg-white"></div>
-                        </div>
-
-                        <div class="timeline-line"></div>
-                        
-                        <div class="flex-grow pb-6 pl-4 md:pb-8 md:pl-8"> 
-                            <div onclick="handleCardClick(3, 'stay')" class="bg-orange-50 p-3 md:p-5 rounded-sm shadow-sm border-l-2 border-orange-500 timeline-card bg-opacity-60 relative "> 
-                                
-                                <div class="flex flex-col">
-                                    <div class="flex items-start justify-between relative">
-                                        <p class="text-lg md:text-xl font-bold text-gray-800 mr-2 leading-snug tracking-wide pr-6">
-                                            高松站前超級旅館
-                                        </p>
-                                    </div>
-                                    
-                                    <div class="mt-2 pt-2 md:mt-3 md:pt-3 border-t border-dashed border-gray-200 w-full flex flex-col md:flex-row md:justify-between md:items-end gap-2">
-                                        
-                                            <p class="text-sm md:text-base text-gray-600 leading-relaxed w-full whitespace-pre-wrap">車站步行大約2到3分鐘</p>
-                                        
-
-                                        <span class="self-start md:self-auto flex-shrink-0 text-xs md:text-sm font-medium px-2 py-0.5 rounded-sm border text-orange-500 bg-white/80">
-                                            住宿
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="flex relative itinerary-item" data-index="4">
-                        
-                        <div class="flex-shrink-0 time-column pt-3"> 
-                            <div class="text-sm md:text-xl font-mono font-bold text-gray-600 inline-block px-1 py-0.5 rounded">
-                                晚餐
-                            </div>
-                            
-                            <div class="timeline-dot bg-red-500 ring-red-100 rounded-full ring-2 md:ring-4 z-10 shadow-sm bg-white"></div>
-                        </div>
-
-                        <div class="timeline-line"></div>
-                        
-                        <div class="flex-grow pb-6 pl-4 md:pb-8 md:pl-8"> 
-                            <div onclick="handleCardClick(4, 'dining')" class="bg-red-50 p-3 md:p-5 rounded-sm shadow-sm border-l-2 border-red-500 timeline-card bg-opacity-60 relative has-detail-cursor"> 
-                                <span class="absolute top-3 right-3 text-lg" title="點擊查看介紹">📖</span>
-                                <div class="flex flex-col">
-                                    <div class="flex items-start justify-between relative">
-                                        <p class="text-lg md:text-xl font-bold text-gray-800 mr-2 leading-snug tracking-wide pr-6">
-                                            お食事処 まつおか
-                                        </p>
-                                    </div>
-                                    
-                                    <div class="mt-2 pt-2 md:mt-3 md:pt-3 border-t border-dashed border-gray-200 w-full flex flex-col md:flex-row md:justify-between md:items-end gap-2">
-                                        
-                                            <p class="text-sm md:text-base text-gray-600 leading-relaxed w-full whitespace-pre-wrap">距離高松站 600公尺 (約1000日圓)</p>
-                                        
-
-                                        <span class="self-start md:self-auto flex-shrink-0 text-xs md:text-sm font-medium px-2 py-0.5 rounded-sm border text-red-500 bg-white/80">
-                                            餐廳
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="flex relative itinerary-item" data-index="5">
-                        
-                        <div class="flex-shrink-0 time-column pt-3"> 
-                            <div class="text-sm md:text-xl font-mono font-bold text-gray-600 inline-block px-1 py-0.5 rounded">
-                                晚上
-                            </div>
-                            
-                            <div class="timeline-dot bg-teal-500 ring-teal-100 rounded-full ring-2 md:ring-4 z-10 shadow-sm bg-white"></div>
-                        </div>
-
-                        <div class="timeline-line"></div>
-                        
-                        <div class="flex-grow pb-6 pl-4 md:pb-8 md:pl-8"> 
-                            <div onclick="handleCardClick(5, 'sightseeing')" class="bg-teal-50 p-3 md:p-5 rounded-sm shadow-sm border-l-2 border-teal-500 timeline-card bg-opacity-60 relative has-detail-cursor"> 
-                                <span class="absolute top-3 right-3 text-lg" title="點擊查看介紹">📖</span>
-                                <div class="flex flex-col">
-                                    <div class="flex items-start justify-between relative">
-                                        <p class="text-lg md:text-xl font-bold text-gray-800 mr-2 leading-snug tracking-wide pr-6">
-                                            高松丸龜町商店街、高松港夜景
-                                        </p>
-                                    </div>
-                                    
-                                    <div class="mt-2 pt-2 md:mt-3 md:pt-3 border-t border-dashed border-gray-200 w-full flex flex-col md:flex-row md:justify-between md:items-end gap-2">
-                                        
-                                            <p class="text-sm md:text-base text-gray-400 leading-relaxed w-full italic">
-                                                無備註
-                                            </p>
-                                        
-
-                                        <span class="self-start md:self-auto flex-shrink-0 text-xs md:text-sm font-medium px-2 py-0.5 rounded-sm border text-teal-500 bg-white/80">
-                                            景點
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div></main>
+        <main id="itinerary-content" class="p-3 md:p-4"></main>
 
         <div id="footer-message" class="p-4 text-center text-sm md:text-base text-gray-400 font-serif-jp">💡 點擊有 📖 圖示的卡片可查看介紹</div>
 
-    </div>
-
-    <div class="fab-container">
-        <button id="edit-btn" onclick="toggleEditMode()" class="fab-btn hover:bg-gray-100 bg-white text-gray-700" title="進入編輯模式">✏️</button>
-        <button id="save-btn" onclick="downloadHTML()" class="fab-btn bg-green-600 text-white hover:bg-green-700" title="下載並儲存檔案">
-            💾
-        </button>
     </div>
 
     <div id="edit-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 hidden">
@@ -425,8 +106,8 @@
                 <button onclick="closeModal('edit-modal')" class="text-gray-500 hover:text-gray-700 font-bold text-xl">×</button>
             </div>
             <div class="p-4 space-y-4 overflow-y-auto">
-                <input type="hidden" id="edit-day-index" value="0">
-                <input type="hidden" id="edit-event-index" value="5">
+                <input type="hidden" id="edit-day-index">
+                <input type="hidden" id="edit-event-index">
 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">時間</label>
@@ -467,18 +148,19 @@
         </div>
     </div>
 
-    <div id="detail-modal" class="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center p-4 backdrop-blur-sm hidden">
+    <div id="detail-modal" class="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center p-4 hidden backdrop-blur-sm">
         <div class="bg-white rounded-lg shadow-2xl w-full max-w-md overflow-hidden flex flex-col max-h-[80vh]">
             <div id="detail-header" class="px-5 py-4 border-b border-gray-100 flex justify-between items-start bg-teal-50">
                 <div>
-                    <span id="detail-type-badge" class="text-xs font-bold px-2 py-0.5 rounded text-white mb-1 inline-block bg-teal-500">景點</span>
-                    <h3 id="detail-title" class="text-xl font-bold text-gray-800 font-serif-jp leading-tight">高松丸龜町商店街、高松港夜景</h3>
+                    <span id="detail-type-badge" class="text-xs font-bold px-2 py-0.5 rounded text-white bg-teal-500 mb-1 inline-block">景點</span>
+                    <h3 id="detail-title" class="text-xl font-bold text-gray-800 font-serif-jp leading-tight">景點名稱</h3>
                 </div>
                 <button onclick="closeModal('detail-modal')" class="text-gray-400 hover:text-gray-600 p-1 bg-white rounded-full h-8 w-8 flex items-center justify-center shadow-sm">✕</button>
             </div>
             
             <div class="p-6 overflow-y-auto bg-white">
-                <div id="detail-content" class="text-gray-700 leading-relaxed whitespace-pre-wrap text-base">丸龜町商店街擁有巨大的圓頂拱廊，非常有特色，即便下雨也能安心逛街。走到盡頭可以前往高松港，欣賞瀨戶內海的夜景和「Liminal Air -core-」兩根彩色柱子地標。</div>
+                <div id="detail-content" class="text-gray-700 leading-relaxed whitespace-pre-wrap text-base">
+                    </div>
             </div>
             
             <div class="bg-gray-50 px-5 py-3 border-t border-gray-100 text-right">
@@ -532,7 +214,7 @@
             {
                 "time": "晚上",
                 "location": "高松丸龜町商店街、高松港夜景",
-                "note": "",
+                "note": "四國最長的商店街",
                 "type": "sightseeing",
                 "description": "丸龜町商店街擁有巨大的圓頂拱廊，非常有特色，即便下雨也能安心逛街。走到盡頭可以前往高松港，欣賞瀨戶內海的夜景和「Liminal Air -core-」兩根彩色柱子地標。"
             }
@@ -589,7 +271,7 @@
             {
                 "time": "13:17-14:30",
                 "location": "橄欖公園",
-                "note": "",
+                "note": "拍攝魔女宅急便風車照，逛希臘風格的建築物和庭園",
                 "type": "sightseeing",
                 "description": "這裡就是真人版《魔女宅急便》的拍攝地！記得先去紀念館免費租借「魔法掃帚」，然後到白色希臘風車前拍跳躍照。園區內還有許多種植橄欖樹的步道，充滿地中海風情。"
             },
@@ -602,7 +284,7 @@
             {
                 "time": "15:30-16:00",
                 "location": "天使之路",
-                "note": "先查詢當天的潮汐拍照",
+                "note": "先查詢當天的潮汐拍照、欣賞風景",
                 "type": "sightseeing",
                 "description": "這是一條只在退潮時才會出現的沙洲路，連接小島與本島，傳說戀人手牽手走過會得到幸福。務必確認當天的乾潮時間，前後約2-3小時可以通行。"
             },
@@ -653,7 +335,7 @@
             {
                 "time": "08:45-11:15",
                 "location": "栗林公園",
-                "note": "",
+                "note": "欣賞日本最美庭園",
                 "type": "sightseeing",
                 "description": "獲得米其林三星評價的日本庭園，一步一景。必定要看的是「飛來峰」，可以從高處俯瞰偃月橋與湖面，是經典的明信片角度。也可以在此體驗搭乘和船遊湖。"
             },
@@ -666,7 +348,7 @@
             {
                 "time": "11:45-12:45",
                 "location": "玉藻公園 (高松城跡)",
-                "note": "從高松站步行10分鐘",
+                "note": "遊覽高松城遺址。從高松站步行10分鐘",
                 "type": "sightseeing",
                 "description": "日本三大水城之一，護城河直接引入海水，因此池裡可以看到鯛魚游泳！這裡有獨特的「鯛願成就」餵魚體驗。"
             },
@@ -711,7 +393,7 @@
             {
                 "time": "晚上",
                 "location": "宮通り商店街",
-                "note": "",
+                "note": "商店街",
                 "type": "sightseeing",
                 "description": "福山車站附近的復古商店街，雖然不像大城市那樣繁華，但保留了昭和時代的氛圍。可以在此散步感受在地生活感，或尋找巷弄裡的小酒吧。"
             }
@@ -841,21 +523,21 @@
             {
                 "time": "14:20-15:00",
                 "location": "廣島城",
-                "note": "",
+                "note": "被原子彈摧毀後重建",
                 "type": "sightseeing",
                 "description": "別名「鯉城」，原本的天守閣在原爆中倒塌，現在看到的是1958年重建的。內部是歷史博物館，介紹廣島城的歷史與武士文化。若有時間可以登上天守閣頂層展望台。"
             },
             {
                 "time": "15:10-17:00",
                 "location": "縮景園",
-                "note": "",
+                "note": "美麗的庭園",
                 "type": "sightseeing",
                 "description": "這是一座江戶時代的大名庭園，名稱寓意為「濃縮了各地的美景」。庭園中央有濯纓池，周圍環繞著小山、小橋與茶室，四季都有不同的花卉盛開，非常適合散步。"
             },
             {
                 "time": "17:15-19:30",
                 "location": "逛街與晚餐 (本通商店街)",
-                "note": "",
+                "note": "廣島最熱鬧的購物區",
                 "type": "dining",
                 "description": "廣島最大的拱廊商店街，聚集了藥妝店、服飾店和各種餐廳。晚餐可以在這裡尋找廣島著名的沾麵、牡蠣料理或穴子飯。"
             },
@@ -959,7 +641,7 @@
             {
                 "time": "09:00-12:00",
                 "location": "北野異人館街",
-                "note": "",
+                "note": "風見雞館和萌黃之館最具代表性",
                 "type": "sightseeing",
                 "description": "充滿異國情調的區域，保留了許多明治時期外國人居住的洋房。這裡的街道坡度較陡，建議穿好走的鞋子。路邊也有許多特色小店和星巴克概念店。"
             },
@@ -1013,7 +695,7 @@
             {
                 "time": "09:10-10:30",
                 "location": "吉備津神社",
-                "note": "",
+                "note": "桃太郎傳說相關",
                 "type": "sightseeing",
                 "description": "這裡是桃太郎傳說的原型之地。最壯觀的是沿著山坡地形建造、全長約360公尺的長迴廊，走在其中非常有神祕感。本殿也是日本唯一的「吉備津造」建築風格，被列為國寶。"
             },
@@ -1079,7 +761,7 @@
             {
                 "time": "08:00-10:30",
                 "location": "岡山後樂園 + 岡山城外觀",
-                "note": "",
+                "note": "日本三大名園之一",
                 "type": "sightseeing",
                 "description": "獲得米其林三星評價的庭園，視野非常開闊，沒有任何遮蔽物。可以從庭園中看到黝黑的岡山城（烏城）作為背景，是絕佳的拍照點。"
             },
