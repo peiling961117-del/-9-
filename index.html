@@ -1,7 +1,7 @@
 <html lang="zh-Hant"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>日本之旅行程 (可編輯版)</title>
+    <title>日本之旅行程 (完整介紹版)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@500;700&family=Roboto+Mono:wght@400;700&display=swap');
@@ -41,6 +41,14 @@
             right: 5px;
             font-size: 1.2rem;
             color: #3b82f6;
+        }
+
+        /* 瀏覽模式下，有介紹內容的卡片樣式 */
+        .has-detail-cursor {
+            cursor: pointer;
+        }
+        .has-detail-cursor:active {
+            transform: scale(0.98);
         }
 
         /* 浮動按鈕樣式 */
@@ -85,7 +93,7 @@
             background-image: url("data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 4 4' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3h1v1H1V3zm2-2h1v1H3V1z' fill='%23dcdcdc' fill-opacity='0.15' fill-rule='evenodd'/%3E%3C/svg%3E");
         }
     </style>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mt-1{margin-top:0.25rem}.mb-4{margin-bottom:1rem}.ml-1{margin-left:0.25rem}.mr-2{margin-right:0.5rem}.mt-2{margin-top:0.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.hidden{display:none}.h-\[85px\]{height:85px}.min-h-screen{min-height:100vh}.w-full{width:100%}.w-24{width:6rem}.max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}.flex-shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.flex-row{flex-direction:row}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-0 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px * var(--tw-space-y-reverse))}.self-start{align-self:flex-start}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-lg{border-radius:0.5rem}.rounded-full{border-radius:9999px}.rounded-sm{border-radius:0.125rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-l-2{border-left-width:2px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-indigo-500{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.border-indigo-700{--tw-border-opacity:1;border-color:rgb(67 56 202 / var(--tw-border-opacity, 1))}.border-orange-500{--tw-border-opacity:1;border-color:rgb(249 115 22 / var(--tw-border-opacity, 1))}.border-red-500{--tw-border-opacity:1;border-color:rgb(239 68 68 / var(--tw-border-opacity, 1))}.border-teal-500{--tw-border-opacity:1;border-color:rgb(20 184 166 / var(--tw-border-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/95{background-color:rgb(255 255 255 / 0.95)}.bg-\[\#4b5563\]{--tw-bg-opacity:1;background-color:rgb(75 85 99 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.bg-orange-500{--tw-bg-opacity:1;background-color:rgb(249 115 22 / var(--tw-bg-opacity, 1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.bg-teal-50{--tw-bg-opacity:1;background-color:rgb(240 253 250 / var(--tw-bg-opacity, 1))}.bg-teal-500{--tw-bg-opacity:1;background-color:rgb(20 184 166 / var(--tw-bg-opacity, 1))}.bg-white\/80{background-color:rgb(255 255 255 / 0.8)}.bg-opacity-50{--tw-bg-opacity:0.5}.bg-opacity-60{--tw-bg-opacity:0.6}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.px-4{padding-left:1rem;padding-right:1rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.pb-10{padding-bottom:2.5rem}.pb-6{padding-bottom:1.5rem}.pl-3{padding-left:0.75rem}.pl-4{padding-left:1rem}.pt-2{padding-top:0.5rem}.pt-3{padding-top:0.75rem}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-base{font-size:1rem;line-height:1.5rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-light{font-weight:300}.font-normal{font-weight:400}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.tracking-wide{letter-spacing:0.025em}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-indigo-500{--tw-text-opacity:1;color:rgb(99 102 241 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-orange-500{--tw-text-opacity:1;color:rgb(249 115 22 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-teal-500{--tw-text-opacity:1;color:rgb(20 184 166 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-indigo-100{--tw-ring-opacity:1;--tw-ring-color:rgb(224 231 255 / var(--tw-ring-opacity, 1))}.ring-orange-100{--tw-ring-opacity:1;--tw-ring-color:rgb(255 237 213 / var(--tw-ring-opacity, 1))}.ring-red-100{--tw-ring-opacity:1;--tw-ring-color:rgb(254 226 226 / var(--tw-ring-opacity, 1))}.ring-teal-100{--tw-ring-opacity:1;--tw-ring-color:rgb(204 251 241 / var(--tw-ring-opacity, 1))}.ring-blue-300{--tw-ring-opacity:1;--tw-ring-color:rgb(147 197 253 / var(--tw-ring-opacity, 1))}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-50:hover{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.hover\:bg-green-700:hover{--tw-bg-opacity:1;background-color:rgb(21 128 61 / var(--tw-bg-opacity, 1))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.focus\:border-blue-500:focus{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}@media (min-width: 768px){.md\:mt-3{margin-top:0.75rem}.md\:h-\[96px\]{height:96px}.md\:w-28{width:7rem}.md\:flex-row{flex-direction:row}.md\:items-end{align-items:flex-end}.md\:justify-between{justify-content:space-between}.md\:self-auto{align-self:auto}.md\:p-4{padding:1rem}.md\:p-3{padding:0.75rem}.md\:p-5{padding:1.25rem}.md\:pb-8{padding-bottom:2rem}.md\:pl-8{padding-left:2rem}.md\:pt-3{padding-top:0.75rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:ring-4{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-4{margin-bottom:1rem}.ml-1{margin-left:0.25rem}.mr-2{margin-right:0.5rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.hidden{display:none}.h-\[85px\]{height:85px}.min-h-screen{min-height:100vh}.w-24{width:6rem}.w-full{width:100%}.max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}.flex-shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.flex-row{flex-direction:row}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-0 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.self-start{align-self:flex-start}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-sm{border-radius:0.125rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-l-2{border-left-width:2px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-indigo-500{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.border-indigo-700{--tw-border-opacity:1;border-color:rgb(67 56 202 / var(--tw-border-opacity, 1))}.border-orange-500{--tw-border-opacity:1;border-color:rgb(249 115 22 / var(--tw-border-opacity, 1))}.border-red-500{--tw-border-opacity:1;border-color:rgb(239 68 68 / var(--tw-border-opacity, 1))}.border-teal-500{--tw-border-opacity:1;border-color:rgb(20 184 166 / var(--tw-border-opacity, 1))}.border-yellow-500{--tw-border-opacity:1;border-color:rgb(234 179 8 / var(--tw-border-opacity, 1))}.bg-\[\#4b5563\]{--tw-bg-opacity:1;background-color:rgb(75 85 99 / var(--tw-bg-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.bg-orange-500{--tw-bg-opacity:1;background-color:rgb(249 115 22 / var(--tw-bg-opacity, 1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.bg-teal-50{--tw-bg-opacity:1;background-color:rgb(240 253 250 / var(--tw-bg-opacity, 1))}.bg-teal-500{--tw-bg-opacity:1;background-color:rgb(20 184 166 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/80{background-color:rgb(255 255 255 / 0.8)}.bg-white\/95{background-color:rgb(255 255 255 / 0.95)}.bg-yellow-50{--tw-bg-opacity:1;background-color:rgb(254 252 232 / var(--tw-bg-opacity, 1))}.bg-yellow-500{--tw-bg-opacity:1;background-color:rgb(234 179 8 / var(--tw-bg-opacity, 1))}.bg-opacity-50{--tw-bg-opacity:0.5}.bg-opacity-60{--tw-bg-opacity:0.6}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-4{padding-left:1rem;padding-right:1rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.pb-10{padding-bottom:2.5rem}.pb-6{padding-bottom:1.5rem}.pl-3{padding-left:0.75rem}.pl-4{padding-left:1rem}.pt-2{padding-top:0.5rem}.pt-3{padding-top:0.75rem}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-light{font-weight:300}.font-medium{font-weight:500}.font-normal{font-weight:400}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.tracking-wide{letter-spacing:0.025em}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-indigo-500{--tw-text-opacity:1;color:rgb(99 102 241 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-orange-500{--tw-text-opacity:1;color:rgb(249 115 22 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-teal-500{--tw-text-opacity:1;color:rgb(20 184 166 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-yellow-500{--tw-text-opacity:1;color:rgb(234 179 8 / var(--tw-text-opacity, 1))}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-indigo-100{--tw-ring-opacity:1;--tw-ring-color:rgb(224 231 255 / var(--tw-ring-opacity, 1))}.ring-orange-100{--tw-ring-opacity:1;--tw-ring-color:rgb(255 237 213 / var(--tw-ring-opacity, 1))}.ring-red-100{--tw-ring-opacity:1;--tw-ring-color:rgb(254 226 226 / var(--tw-ring-opacity, 1))}.ring-teal-100{--tw-ring-opacity:1;--tw-ring-color:rgb(204 251 241 / var(--tw-ring-opacity, 1))}.ring-blue-300{--tw-ring-opacity:1;--tw-ring-color:rgb(147 197 253 / var(--tw-ring-opacity, 1))}.ring-yellow-100{--tw-ring-opacity:1;--tw-ring-color:rgb(254 249 195 / var(--tw-ring-opacity, 1))}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-50:hover{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.hover\:bg-green-700:hover{--tw-bg-opacity:1;background-color:rgb(21 128 61 / var(--tw-bg-opacity, 1))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.focus\:border-blue-500:focus{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}@media (min-width: 768px){.md\:mt-3{margin-top:0.75rem}.md\:h-\[96px\]{height:96px}.md\:w-28{width:7rem}.md\:flex-row{flex-direction:row}.md\:items-end{align-items:flex-end}.md\:justify-between{justify-content:space-between}.md\:self-auto{align-self:auto}.md\:p-3{padding:0.75rem}.md\:p-4{padding:1rem}.md\:p-5{padding:1.25rem}.md\:pb-8{padding-bottom:2rem}.md\:pl-8{padding-left:2rem}.md\:pt-3{padding-top:0.75rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:ring-4{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}}</style></head>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.right-3{right:0.75rem}.top-3{top:0.75rem}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mx-2{margin-left:0.5rem;margin-right:0.5rem}.mb-1{margin-bottom:0.25rem}.mt-1{margin-top:0.25rem}.mb-4{margin-bottom:1rem}.ml-1{margin-left:0.25rem}.mr-2{margin-right:0.5rem}.mt-2{margin-top:0.5rem}.mb-2{margin-bottom:0.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-8{height:2rem}.h-\[85px\]{height:85px}.h-1{height:0.25rem}.max-h-\[80vh\]{max-height:80vh}.max-h-\[90vh\]{max-height:90vh}.min-h-screen{min-height:100vh}.w-8{width:2rem}.w-full{width:100%}.w-24{width:6rem}.max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}.flex-shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-row{flex-direction:row}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-0 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.self-start{align-self:flex-start}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.whitespace-pre-wrap{white-space:pre-wrap}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-sm{border-radius:0.125rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-l-2{border-left-width:2px}.border-l-4{border-left-width:4px}.border-b-2{border-bottom-width:2px}.border-dashed{border-style:dashed}.border-gray-100{--tw-border-opacity:1;border-color:rgb(243 244 246 / var(--tw-border-opacity, 1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-indigo-200{--tw-border-opacity:1;border-color:rgb(199 210 254 / var(--tw-border-opacity, 1))}.border-indigo-500{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.border-indigo-700{--tw-border-opacity:1;border-color:rgb(67 56 202 / var(--tw-border-opacity, 1))}.border-orange-500{--tw-border-opacity:1;border-color:rgb(249 115 22 / var(--tw-border-opacity, 1))}.border-red-500{--tw-border-opacity:1;border-color:rgb(239 68 68 / var(--tw-border-opacity, 1))}.border-teal-500{--tw-border-opacity:1;border-color:rgb(20 184 166 / var(--tw-border-opacity, 1))}.border-yellow-500{--tw-border-opacity:1;border-color:rgb(234 179 8 / var(--tw-border-opacity, 1))}.border-\[\#d65a31\]{--tw-border-opacity:1;border-color:rgb(214 90 49 / var(--tw-border-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-teal-50{--tw-bg-opacity:1;background-color:rgb(240 253 250 / var(--tw-bg-opacity, 1))}.bg-teal-500{--tw-bg-opacity:1;background-color:rgb(20 184 166 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/95{background-color:rgb(255 255 255 / 0.95)}.bg-\[\#4b5563\]{--tw-bg-opacity:1;background-color:rgb(75 85 99 / var(--tw-bg-opacity, 1))}.bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.bg-orange-500{--tw-bg-opacity:1;background-color:rgb(249 115 22 / var(--tw-bg-opacity, 1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.bg-white\/80{background-color:rgb(255 255 255 / 0.8)}.bg-yellow-50{--tw-bg-opacity:1;background-color:rgb(254 252 232 / var(--tw-bg-opacity, 1))}.bg-yellow-500{--tw-bg-opacity:1;background-color:rgb(234 179 8 / var(--tw-bg-opacity, 1))}.bg-\[\#d65a31\]{--tw-bg-opacity:1;background-color:rgb(214 90 49 / var(--tw-bg-opacity, 1))}.bg-\[\#f2f4f6\]{--tw-bg-opacity:1;background-color:rgb(242 244 246 / var(--tw-bg-opacity, 1))}.bg-opacity-50{--tw-bg-opacity:0.5}.bg-opacity-60{--tw-bg-opacity:0.6}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-5{padding:1.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.pb-10{padding-bottom:2.5rem}.pt-3{padding-top:0.75rem}.pb-6{padding-bottom:1.5rem}.pl-3{padding-left:0.75rem}.pl-4{padding-left:1rem}.pr-6{padding-right:1.5rem}.pt-2{padding-top:0.5rem}.pb-2{padding-bottom:0.5rem}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-light{font-weight:300}.font-normal{font-weight:400}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.leading-snug{line-height:1.375}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-indigo-500{--tw-text-opacity:1;color:rgb(99 102 241 / var(--tw-text-opacity, 1))}.text-orange-500{--tw-text-opacity:1;color:rgb(249 115 22 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-teal-500{--tw-text-opacity:1;color:rgb(20 184 166 / var(--tw-text-opacity, 1))}.text-yellow-500{--tw-text-opacity:1;color:rgb(234 179 8 / var(--tw-text-opacity, 1))}.text-\[\#d65a31\]{--tw-text-opacity:1;color:rgb(214 90 49 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.opacity-80{opacity:0.8}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-indigo-100{--tw-ring-opacity:1;--tw-ring-color:rgb(224 231 255 / var(--tw-ring-opacity, 1))}.ring-orange-100{--tw-ring-opacity:1;--tw-ring-color:rgb(255 237 213 / var(--tw-ring-opacity, 1))}.ring-red-100{--tw-ring-opacity:1;--tw-ring-color:rgb(254 226 226 / var(--tw-ring-opacity, 1))}.ring-teal-100{--tw-ring-opacity:1;--tw-ring-color:rgb(204 251 241 / var(--tw-ring-opacity, 1))}.ring-yellow-100{--tw-ring-opacity:1;--tw-ring-color:rgb(254 249 195 / var(--tw-ring-opacity, 1))}.ring-blue-300{--tw-ring-opacity:1;--tw-ring-color:rgb(147 197 253 / var(--tw-ring-opacity, 1))}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-50:hover{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-700:hover{--tw-bg-opacity:1;background-color:rgb(55 65 81 / var(--tw-bg-opacity, 1))}.hover\:bg-green-700:hover{--tw-bg-opacity:1;background-color:rgb(21 128 61 / var(--tw-bg-opacity, 1))}.hover\:text-gray-600:hover{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.focus\:border-blue-500:focus{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.focus\:border-indigo-500:focus{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241 / var(--tw-ring-opacity, 1))}@media (min-width: 768px){.md\:mt-3{margin-top:0.75rem}.md\:h-\[96px\]{height:96px}.md\:w-28{width:7rem}.md\:flex-row{flex-direction:row}.md\:items-end{align-items:flex-end}.md\:justify-between{justify-content:space-between}.md\:self-auto{align-self:auto}.md\:p-4{padding:1rem}.md\:p-3{padding:0.75rem}.md\:p-5{padding:1.25rem}.md\:p-6{padding:1.5rem}.md\:pb-8{padding-bottom:2rem}.md\:pl-8{padding-left:2rem}.md\:pt-3{padding-top:0.75rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:ring-4{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.right-3{right:0.75rem}.top-0{top:0px}.top-3{top:0.75rem}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mx-2{margin-left:0.5rem;margin-right:0.5rem}.mb-1{margin-bottom:0.25rem}.mb-4{margin-bottom:1rem}.ml-1{margin-left:0.25rem}.mr-2{margin-right:0.5rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mb-2{margin-bottom:0.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-8{height:2rem}.h-\[85px\]{height:85px}.h-1{height:0.25rem}.max-h-\[80vh\]{max-height:80vh}.max-h-\[90vh\]{max-height:90vh}.min-h-screen{min-height:100vh}.w-24{width:6rem}.w-8{width:2rem}.w-full{width:100%}.max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}.flex-shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-row{flex-direction:row}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-0 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.self-start{align-self:flex-start}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.whitespace-pre-wrap{white-space:pre-wrap}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-sm{border-radius:0.125rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-l-2{border-left-width:2px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-b-2{border-bottom-width:2px}.border-dashed{border-style:dashed}.border-gray-100{--tw-border-opacity:1;border-color:rgb(243 244 246 / var(--tw-border-opacity, 1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-indigo-200{--tw-border-opacity:1;border-color:rgb(199 210 254 / var(--tw-border-opacity, 1))}.border-indigo-500{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.border-indigo-700{--tw-border-opacity:1;border-color:rgb(67 56 202 / var(--tw-border-opacity, 1))}.border-red-500{--tw-border-opacity:1;border-color:rgb(239 68 68 / var(--tw-border-opacity, 1))}.border-teal-500{--tw-border-opacity:1;border-color:rgb(20 184 166 / var(--tw-border-opacity, 1))}.border-orange-500{--tw-border-opacity:1;border-color:rgb(249 115 22 / var(--tw-border-opacity, 1))}.border-yellow-500{--tw-border-opacity:1;border-color:rgb(234 179 8 / var(--tw-border-opacity, 1))}.border-\[\#d65a31\]{--tw-border-opacity:1;border-color:rgb(214 90 49 / var(--tw-border-opacity, 1))}.bg-\[\#4b5563\]{--tw-bg-opacity:1;background-color:rgb(75 85 99 / var(--tw-bg-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.bg-teal-50{--tw-bg-opacity:1;background-color:rgb(240 253 250 / var(--tw-bg-opacity, 1))}.bg-teal-500{--tw-bg-opacity:1;background-color:rgb(20 184 166 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/80{background-color:rgb(255 255 255 / 0.8)}.bg-white\/95{background-color:rgb(255 255 255 / 0.95)}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.bg-orange-500{--tw-bg-opacity:1;background-color:rgb(249 115 22 / var(--tw-bg-opacity, 1))}.bg-yellow-50{--tw-bg-opacity:1;background-color:rgb(254 252 232 / var(--tw-bg-opacity, 1))}.bg-yellow-500{--tw-bg-opacity:1;background-color:rgb(234 179 8 / var(--tw-bg-opacity, 1))}.bg-\[\#d65a31\]{--tw-bg-opacity:1;background-color:rgb(214 90 49 / var(--tw-bg-opacity, 1))}.bg-\[\#f2f4f6\]{--tw-bg-opacity:1;background-color:rgb(242 244 246 / var(--tw-bg-opacity, 1))}.bg-opacity-50{--tw-bg-opacity:0.5}.bg-opacity-60{--tw-bg-opacity:0.6}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-5{padding:1.25rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-10{padding-bottom:2.5rem}.pb-6{padding-bottom:1.5rem}.pl-3{padding-left:0.75rem}.pl-4{padding-left:1rem}.pr-6{padding-right:1.5rem}.pt-2{padding-top:0.5rem}.pt-3{padding-top:0.75rem}.pb-2{padding-bottom:0.5rem}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-light{font-weight:300}.font-medium{font-weight:500}.font-normal{font-weight:400}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-indigo-500{--tw-text-opacity:1;color:rgb(99 102 241 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-teal-500{--tw-text-opacity:1;color:rgb(20 184 166 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-orange-500{--tw-text-opacity:1;color:rgb(249 115 22 / var(--tw-text-opacity, 1))}.text-yellow-500{--tw-text-opacity:1;color:rgb(234 179 8 / var(--tw-text-opacity, 1))}.text-\[\#d65a31\]{--tw-text-opacity:1;color:rgb(214 90 49 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.opacity-80{opacity:0.8}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-indigo-100{--tw-ring-opacity:1;--tw-ring-color:rgb(224 231 255 / var(--tw-ring-opacity, 1))}.ring-red-100{--tw-ring-opacity:1;--tw-ring-color:rgb(254 226 226 / var(--tw-ring-opacity, 1))}.ring-teal-100{--tw-ring-opacity:1;--tw-ring-color:rgb(204 251 241 / var(--tw-ring-opacity, 1))}.ring-orange-100{--tw-ring-opacity:1;--tw-ring-color:rgb(255 237 213 / var(--tw-ring-opacity, 1))}.ring-yellow-100{--tw-ring-opacity:1;--tw-ring-color:rgb(254 249 195 / var(--tw-ring-opacity, 1))}.ring-blue-300{--tw-ring-opacity:1;--tw-ring-color:rgb(147 197 253 / var(--tw-ring-opacity, 1))}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-50:hover{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-700:hover{--tw-bg-opacity:1;background-color:rgb(55 65 81 / var(--tw-bg-opacity, 1))}.hover\:bg-green-700:hover{--tw-bg-opacity:1;background-color:rgb(21 128 61 / var(--tw-bg-opacity, 1))}.hover\:text-gray-600:hover{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.focus\:border-blue-500:focus{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.focus\:border-indigo-500:focus{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241 / var(--tw-ring-opacity, 1))}@media (min-width: 768px){.md\:mt-3{margin-top:0.75rem}.md\:h-\[96px\]{height:96px}.md\:w-28{width:7rem}.md\:flex-row{flex-direction:row}.md\:items-end{align-items:flex-end}.md\:justify-between{justify-content:space-between}.md\:self-auto{align-self:auto}.md\:p-3{padding:0.75rem}.md\:p-4{padding:1rem}.md\:p-5{padding:1.25rem}.md\:p-6{padding:1.5rem}.md\:pb-8{padding-bottom:2rem}.md\:pl-8{padding-left:2rem}.md\:pt-3{padding-top:0.75rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:ring-4{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}}</style></head>
 <body class="min-h-screen">
 
     <div id="app" class="max-w-xl mx-auto bg-white min-h-screen shadow-lg pb-10 relative">
@@ -109,11 +117,11 @@
                 <div class="text-sm md:text-base font-medium mt-1 font-serif-jp">住宿</div> 
             </button><button data-view="11/29(六)" class="
                     flex-shrink-0 w-24 md:w-28 p-2 md:p-3 rounded transition-all duration-300
-                    bg-white text-gray-700 hover:bg-gray-50 border border-gray-200
+                    bg-[#4b5563] text-white shadow-md
                 ">
-                    <div class="text-xs md:text-sm font-medium text-gray-400 truncate font-serif-jp">岡山</div>
+                    <div class="text-xs md:text-sm font-medium text-gray-300 truncate font-serif-jp">岡山</div>
                     <div class="text-lg md:text-xl font-bold mt-1 font-serif-jp">11/29</div> 
-                    <div class="text-sm md:text-base font-medium">週六</div> 
+                    <div class="text-sm md:text-base font-light">週六</div> 
                 </button><button data-view="11/30(日)" class="
                     flex-shrink-0 w-24 md:w-28 p-2 md:p-3 rounded transition-all duration-300
                     bg-white text-gray-700 hover:bg-gray-50 border border-gray-200
@@ -165,17 +173,17 @@
                     <div class="text-sm md:text-base font-medium">週六</div> 
                 </button><button data-view="12/7(日)" class="
                     flex-shrink-0 w-24 md:w-28 p-2 md:p-3 rounded transition-all duration-300
-                    bg-[#4b5563] text-white shadow-md
+                    bg-white text-gray-700 hover:bg-gray-50 border border-gray-200
                 ">
-                    <div class="text-xs md:text-sm font-medium text-gray-300 truncate font-serif-jp">岡山</div>
+                    <div class="text-xs md:text-sm font-medium text-gray-400 truncate font-serif-jp">岡山</div>
                     <div class="text-lg md:text-xl font-bold mt-1 font-serif-jp">12/7</div> 
-                    <div class="text-sm md:text-base font-light">週日</div> 
+                    <div class="text-sm md:text-base font-medium">週日</div> 
                 </button></nav>
 
         <main id="itinerary-content" class="p-3 md:p-4">
                 <div class="p-2 mb-4 mt-2">
-                    <h2 class="text-xl md:text-2xl font-serif-jp font-bold text-gray-800 border-l-4 border-indigo-700 pl-3">12/7 <span class="text-base font-normal text-gray-500 ml-1">(週日)</span></h2> 
-                    <p class="text-base md:text-lg text-indigo-700 font-medium pl-4 mt-1 font-serif-jp">岡山/返國 · 岡山</p> 
+                    <h2 class="text-xl md:text-2xl font-serif-jp font-bold text-gray-800 border-l-4 border-indigo-700 pl-3">11/29 <span class="text-base font-normal text-gray-500 ml-1">(週六)</span></h2> 
+                    <p class="text-base md:text-lg text-indigo-700 font-medium pl-4 mt-1 font-serif-jp">岡山/高松 · 岡山・高松</p> 
                 </div>
                 <div class="space-y-0">
             
@@ -183,32 +191,31 @@
                         
                         <div class="flex-shrink-0 time-column pt-3"> 
                             <div class="text-sm md:text-xl font-mono font-bold text-gray-600 inline-block px-1 py-0.5 rounded">
-                                08:00-10:30
+                                11:10-14:35
                             </div>
                             
-                            <div class="timeline-dot bg-teal-500 ring-teal-100 rounded-full ring-2 md:ring-4 z-10 shadow-sm bg-white"></div>
+                            <div class="timeline-dot bg-indigo-500 ring-indigo-100 rounded-full ring-2 md:ring-4 z-10 shadow-sm bg-white"></div>
                         </div>
 
                         <div class="timeline-line"></div>
                         
                         <div class="flex-grow pb-6 pl-4 md:pb-8 md:pl-8"> 
-                            <div onclick="handleCardClick(0)" class="bg-teal-50 p-3 md:p-5 rounded-sm shadow-sm border-l-2 border-teal-500 timeline-card bg-opacity-60"> 
+                            <div onclick="handleCardClick(0, 'transport')" class="bg-indigo-50 p-3 md:p-5 rounded-sm shadow-sm border-l-2 border-indigo-500 timeline-card bg-opacity-60 relative "> 
+                                
                                 <div class="flex flex-col">
                                     <div class="flex items-start justify-between relative">
-                                        <p class="text-lg md:text-xl font-bold text-gray-800 mr-2 leading-snug tracking-wide">
-                                            岡山後樂園 + 岡山城外觀
+                                        <p class="text-lg md:text-xl font-bold text-gray-800 mr-2 leading-snug tracking-wide pr-6">
+                                            搭飛機
                                         </p>
                                     </div>
                                     
                                     <div class="mt-2 pt-2 md:mt-3 md:pt-3 border-t border-dashed border-gray-200 w-full flex flex-col md:flex-row md:justify-between md:items-end gap-2">
                                         
-                                            <p class="text-sm md:text-base text-gray-600 leading-relaxed w-full">
-                                                日本三大名園之一
-                                            </p>
+                                            <p class="text-sm md:text-base text-gray-600 leading-relaxed w-full whitespace-pre-wrap">注意國際線需提前2.5小時到場</p>
                                         
 
-                                        <span class="self-start md:self-auto flex-shrink-0 text-xs md:text-sm font-medium px-2 py-0.5 rounded-sm border text-teal-500 bg-white/80">
-                                            景點
+                                        <span class="self-start md:self-auto flex-shrink-0 text-xs md:text-sm font-medium px-2 py-0.5 rounded-sm border text-indigo-500 bg-white/80">
+                                            交通
                                         </span>
                                     </div>
                                 </div>
@@ -220,7 +227,7 @@
                         
                         <div class="flex-shrink-0 time-column pt-3"> 
                             <div class="text-sm md:text-xl font-mono font-bold text-gray-600 inline-block px-1 py-0.5 rounded">
-                                10:45-11:05
+                                16:00-16:30
                             </div>
                             
                             <div class="timeline-dot bg-indigo-500 ring-indigo-100 rounded-full ring-2 md:ring-4 z-10 shadow-sm bg-white"></div>
@@ -229,19 +236,18 @@
                         <div class="timeline-line"></div>
                         
                         <div class="flex-grow pb-6 pl-4 md:pb-8 md:pl-8"> 
-                            <div onclick="handleCardClick(1)" class="bg-indigo-50 p-3 md:p-5 rounded-sm shadow-sm border-l-2 border-indigo-500 timeline-card bg-opacity-60"> 
+                            <div onclick="handleCardClick(1, 'transport')" class="bg-indigo-50 p-3 md:p-5 rounded-sm shadow-sm border-l-2 border-indigo-500 timeline-card bg-opacity-60 relative "> 
+                                
                                 <div class="flex flex-col">
                                     <div class="flex items-start justify-between relative">
-                                        <p class="text-lg md:text-xl font-bold text-gray-800 mr-2 leading-snug tracking-wide">
-                                            後樂園-飯店
+                                        <p class="text-lg md:text-xl font-bold text-gray-800 mr-2 leading-snug tracking-wide pr-6">
+                                            岡山站 Okayama
                                         </p>
                                     </div>
                                     
                                     <div class="mt-2 pt-2 md:mt-3 md:pt-3 border-t border-dashed border-gray-200 w-full flex flex-col md:flex-row md:justify-between md:items-end gap-2">
                                         
-                                            <p class="text-sm md:text-base text-gray-600 leading-relaxed w-full">
-                                                步行+取行李
-                                            </p>
+                                            <p class="text-sm md:text-base text-gray-600 leading-relaxed w-full whitespace-pre-wrap">搭乘機場巴士到岡山站(可刷IC卡)，並在岡山站開通 JR PASS</p>
                                         
 
                                         <span class="self-start md:self-auto flex-shrink-0 text-xs md:text-sm font-medium px-2 py-0.5 rounded-sm border text-indigo-500 bg-white/80">
@@ -257,32 +263,32 @@
                         
                         <div class="flex-shrink-0 time-column pt-3"> 
                             <div class="text-sm md:text-xl font-mono font-bold text-gray-600 inline-block px-1 py-0.5 rounded">
-                                11:15-12:15
+                                16:40-17:35
                             </div>
                             
-                            <div class="timeline-dot bg-red-500 ring-red-100 rounded-full ring-2 md:ring-4 z-10 shadow-sm bg-white"></div>
+                            <div class="timeline-dot bg-indigo-500 ring-indigo-100 rounded-full ring-2 md:ring-4 z-10 shadow-sm bg-white"></div>
                         </div>
 
                         <div class="timeline-line"></div>
                         
                         <div class="flex-grow pb-6 pl-4 md:pb-8 md:pl-8"> 
-                            <div onclick="handleCardClick(2)" class="bg-red-50 p-3 md:p-5 rounded-sm shadow-sm border-l-2 border-red-500 timeline-card bg-opacity-60"> 
+                            <div onclick="handleCardClick(2, 'transport')" class="bg-indigo-50 p-3 md:p-5 rounded-sm shadow-sm border-l-2 border-indigo-500 timeline-card bg-opacity-60 relative "> 
+                                
                                 <div class="flex flex-col">
                                     <div class="flex items-start justify-between relative">
-                                        <p class="text-lg md:text-xl font-bold text-gray-800 mr-2 leading-snug tracking-wide">
-                                            午餐 (岡山車站內或地下街)
+                                        <p class="text-lg md:text-xl font-bold text-gray-800 mr-2 leading-snug tracking-wide pr-6">
+                                            高松站 Takamatsu
                                         </p>
                                     </div>
                                     
                                     <div class="mt-2 pt-2 md:mt-3 md:pt-3 border-t border-dashed border-gray-200 w-full flex flex-col md:flex-row md:justify-between md:items-end gap-2">
                                         
-                                            <p class="text-sm md:text-base text-gray-600 leading-relaxed w-full">
-                                                岡山一番街或SANSUTE 岡山
-                                            </p>
+                                            <p class="text-sm md:text-base text-gray-600 leading-relaxed w-full whitespace-pre-wrap">往高松班次，車程約1小時。
+建議班次：15:42, 16:13, 16:42, 17:13, 17:42, 18:13</p>
                                         
 
-                                        <span class="self-start md:self-auto flex-shrink-0 text-xs md:text-sm font-medium px-2 py-0.5 rounded-sm border text-red-500 bg-white/80">
-                                            餐廳
+                                        <span class="self-start md:self-auto flex-shrink-0 text-xs md:text-sm font-medium px-2 py-0.5 rounded-sm border text-indigo-500 bg-white/80">
+                                            交通
                                         </span>
                                     </div>
                                 </div>
@@ -294,32 +300,31 @@
                         
                         <div class="flex-shrink-0 time-column pt-3"> 
                             <div class="text-sm md:text-xl font-mono font-bold text-gray-600 inline-block px-1 py-0.5 rounded">
-                                12:40-13:10
+                                Check-in
                             </div>
                             
-                            <div class="timeline-dot bg-indigo-500 ring-indigo-100 rounded-full ring-2 md:ring-4 z-10 shadow-sm bg-white"></div>
+                            <div class="timeline-dot bg-orange-500 ring-orange-100 rounded-full ring-2 md:ring-4 z-10 shadow-sm bg-white"></div>
                         </div>
 
                         <div class="timeline-line"></div>
                         
                         <div class="flex-grow pb-6 pl-4 md:pb-8 md:pl-8"> 
-                            <div onclick="handleCardClick(3)" class="bg-indigo-50 p-3 md:p-5 rounded-sm shadow-sm border-l-2 border-indigo-500 timeline-card bg-opacity-60"> 
+                            <div onclick="handleCardClick(3, 'stay')" class="bg-orange-50 p-3 md:p-5 rounded-sm shadow-sm border-l-2 border-orange-500 timeline-card bg-opacity-60 relative "> 
+                                
                                 <div class="flex flex-col">
                                     <div class="flex items-start justify-between relative">
-                                        <p class="text-lg md:text-xl font-bold text-gray-800 mr-2 leading-snug tracking-wide">
-                                            岡山車站巴士站-岡山機場
+                                        <p class="text-lg md:text-xl font-bold text-gray-800 mr-2 leading-snug tracking-wide pr-6">
+                                            高松站前超級旅館
                                         </p>
                                     </div>
                                     
                                     <div class="mt-2 pt-2 md:mt-3 md:pt-3 border-t border-dashed border-gray-200 w-full flex flex-col md:flex-row md:justify-between md:items-end gap-2">
                                         
-                                            <p class="text-sm md:text-base text-gray-600 leading-relaxed w-full">
-                                                2號巴士月台搭乘12:40班次
-                                            </p>
+                                            <p class="text-sm md:text-base text-gray-600 leading-relaxed w-full whitespace-pre-wrap">車站步行大約2到3分鐘</p>
                                         
 
-                                        <span class="self-start md:self-auto flex-shrink-0 text-xs md:text-sm font-medium px-2 py-0.5 rounded-sm border text-indigo-500 bg-white/80">
-                                            交通
+                                        <span class="self-start md:self-auto flex-shrink-0 text-xs md:text-sm font-medium px-2 py-0.5 rounded-sm border text-orange-500 bg-white/80">
+                                            住宿
                                         </span>
                                     </div>
                                 </div>
@@ -331,32 +336,69 @@
                         
                         <div class="flex-shrink-0 time-column pt-3"> 
                             <div class="text-sm md:text-xl font-mono font-bold text-gray-600 inline-block px-1 py-0.5 rounded">
-                                15:25
+                                晚餐
                             </div>
                             
-                            <div class="timeline-dot bg-indigo-500 ring-indigo-100 rounded-full ring-2 md:ring-4 z-10 shadow-sm bg-white"></div>
+                            <div class="timeline-dot bg-red-500 ring-red-100 rounded-full ring-2 md:ring-4 z-10 shadow-sm bg-white"></div>
                         </div>
 
                         <div class="timeline-line"></div>
                         
                         <div class="flex-grow pb-6 pl-4 md:pb-8 md:pl-8"> 
-                            <div onclick="handleCardClick(4)" class="bg-indigo-50 p-3 md:p-5 rounded-sm shadow-sm border-l-2 border-indigo-500 timeline-card bg-opacity-60"> 
+                            <div onclick="handleCardClick(4, 'dining')" class="bg-red-50 p-3 md:p-5 rounded-sm shadow-sm border-l-2 border-red-500 timeline-card bg-opacity-60 relative has-detail-cursor"> 
+                                <span class="absolute top-3 right-3 text-lg" title="點擊查看介紹">📖</span>
                                 <div class="flex flex-col">
                                     <div class="flex items-start justify-between relative">
-                                        <p class="text-lg md:text-xl font-bold text-gray-800 mr-2 leading-snug tracking-wide">
-                                            搭飛機
+                                        <p class="text-lg md:text-xl font-bold text-gray-800 mr-2 leading-snug tracking-wide pr-6">
+                                            お食事処 まつおか
                                         </p>
                                     </div>
                                     
                                     <div class="mt-2 pt-2 md:mt-3 md:pt-3 border-t border-dashed border-gray-200 w-full flex flex-col md:flex-row md:justify-between md:items-end gap-2">
                                         
-                                            <p class="text-sm md:text-base text-gray-600 leading-relaxed w-full">
-                                                國際線需提前2.5小時到場
+                                            <p class="text-sm md:text-base text-gray-600 leading-relaxed w-full whitespace-pre-wrap">距離高松站 600公尺 (約1000日圓)</p>
+                                        
+
+                                        <span class="self-start md:self-auto flex-shrink-0 text-xs md:text-sm font-medium px-2 py-0.5 rounded-sm border text-red-500 bg-white/80">
+                                            餐廳
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="flex relative itinerary-item" data-index="5">
+                        
+                        <div class="flex-shrink-0 time-column pt-3"> 
+                            <div class="text-sm md:text-xl font-mono font-bold text-gray-600 inline-block px-1 py-0.5 rounded">
+                                晚上
+                            </div>
+                            
+                            <div class="timeline-dot bg-teal-500 ring-teal-100 rounded-full ring-2 md:ring-4 z-10 shadow-sm bg-white"></div>
+                        </div>
+
+                        <div class="timeline-line"></div>
+                        
+                        <div class="flex-grow pb-6 pl-4 md:pb-8 md:pl-8"> 
+                            <div onclick="handleCardClick(5, 'sightseeing')" class="bg-teal-50 p-3 md:p-5 rounded-sm shadow-sm border-l-2 border-teal-500 timeline-card bg-opacity-60 relative has-detail-cursor"> 
+                                <span class="absolute top-3 right-3 text-lg" title="點擊查看介紹">📖</span>
+                                <div class="flex flex-col">
+                                    <div class="flex items-start justify-between relative">
+                                        <p class="text-lg md:text-xl font-bold text-gray-800 mr-2 leading-snug tracking-wide pr-6">
+                                            高松丸龜町商店街、高松港夜景
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="mt-2 pt-2 md:mt-3 md:pt-3 border-t border-dashed border-gray-200 w-full flex flex-col md:flex-row md:justify-between md:items-end gap-2">
+                                        
+                                            <p class="text-sm md:text-base text-gray-400 leading-relaxed w-full italic">
+                                                無備註
                                             </p>
                                         
 
-                                        <span class="self-start md:self-auto flex-shrink-0 text-xs md:text-sm font-medium px-2 py-0.5 rounded-sm border text-indigo-500 bg-white/80">
-                                            交通
+                                        <span class="self-start md:self-auto flex-shrink-0 text-xs md:text-sm font-medium px-2 py-0.5 rounded-sm border text-teal-500 bg-white/80">
+                                            景點
                                         </span>
                                     </div>
                                 </div>
@@ -365,7 +407,7 @@
                     </div>
                 </div></main>
 
-        <div id="footer-message" class="p-4 text-center text-sm md:text-base text-gray-400 font-serif-jp">💡 此為純瀏覽模式</div>
+        <div id="footer-message" class="p-4 text-center text-sm md:text-base text-gray-400 font-serif-jp">💡 點擊有 📖 圖示的卡片可查看介紹</div>
 
     </div>
 
@@ -377,14 +419,14 @@
     </div>
 
     <div id="edit-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-white rounded-lg shadow-xl w-full max-w-md overflow-hidden">
-            <div class="bg-gray-100 px-4 py-3 border-b border-gray-200 flex justify-between items-center">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-md overflow-hidden max-h-[90vh] flex flex-col">
+            <div class="bg-gray-100 px-4 py-3 border-b border-gray-200 flex justify-between items-center flex-shrink-0">
                 <h3 class="text-lg font-bold text-gray-800 font-serif-jp">編輯行程</h3>
-                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700 font-bold text-xl">×</button>
+                <button onclick="closeModal('edit-modal')" class="text-gray-500 hover:text-gray-700 font-bold text-xl">×</button>
             </div>
-            <div class="p-4 space-y-4">
-                <input type="hidden" id="edit-day-index" value="6">
-                <input type="hidden" id="edit-event-index" value="6">
+            <div class="p-4 space-y-4 overflow-y-auto">
+                <input type="hidden" id="edit-day-index" value="0">
+                <input type="hidden" id="edit-event-index" value="5">
 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">時間</label>
@@ -408,13 +450,39 @@
                 </div>
 
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">備註</label>
-                    <textarea id="edit-note" rows="3" class="w-full border border-gray-300 rounded p-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">備註 (顯示在卡片上)</label>
+                    <textarea id="edit-note" rows="2" class="w-full border border-gray-300 rounded p-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                </div>
+
+                <div class="border-t border-gray-200 pt-3">
+                    <label class="block text-sm font-bold text-indigo-700 mb-1">📖 景點/餐廳詳細介紹 (點擊卡片後顯示)</label>
+                    <p class="text-xs text-gray-500 mb-1">填寫此欄位後，該卡片將變為可點擊查看詳情。</p>
+                    <textarea id="edit-description" rows="4" class="w-full border border-indigo-200 bg-indigo-50 rounded p-2 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="例如：這家餐廳的招牌菜是... 這裡必拍的角度是..."></textarea>
                 </div>
             </div>
-            <div class="bg-gray-50 px-4 py-3 flex justify-end space-x-2">
-                <button onclick="closeModal()" class="px-4 py-2 bg-white border border-gray-300 rounded text-gray-700 hover:bg-gray-50">取消</button>
+            <div class="bg-gray-50 px-4 py-3 flex justify-end space-x-2 flex-shrink-0">
+                <button onclick="closeModal('edit-modal')" class="px-4 py-2 bg-white border border-gray-300 rounded text-gray-700 hover:bg-gray-50">取消</button>
                 <button onclick="saveEventChanges()" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">確認修改</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="detail-modal" class="fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center p-4 backdrop-blur-sm hidden">
+        <div class="bg-white rounded-lg shadow-2xl w-full max-w-md overflow-hidden flex flex-col max-h-[80vh]">
+            <div id="detail-header" class="px-5 py-4 border-b border-gray-100 flex justify-between items-start bg-teal-50">
+                <div>
+                    <span id="detail-type-badge" class="text-xs font-bold px-2 py-0.5 rounded text-white mb-1 inline-block bg-teal-500">景點</span>
+                    <h3 id="detail-title" class="text-xl font-bold text-gray-800 font-serif-jp leading-tight">高松丸龜町商店街、高松港夜景</h3>
+                </div>
+                <button onclick="closeModal('detail-modal')" class="text-gray-400 hover:text-gray-600 p-1 bg-white rounded-full h-8 w-8 flex items-center justify-center shadow-sm">✕</button>
+            </div>
+            
+            <div class="p-6 overflow-y-auto bg-white">
+                <div id="detail-content" class="text-gray-700 leading-relaxed whitespace-pre-wrap text-base">丸龜町商店街擁有巨大的圓頂拱廊，非常有特色，即便下雨也能安心逛街。走到盡頭可以前往高松港，欣賞瀨戶內海的夜景和「Liminal Air -core-」兩根彩色柱子地標。</div>
+            </div>
+            
+            <div class="bg-gray-50 px-5 py-3 border-t border-gray-100 text-right">
+                <button onclick="closeModal('detail-modal')" class="px-5 py-2 bg-gray-800 text-white rounded shadow hover:bg-gray-700 text-sm">關閉</button>
             </div>
         </div>
     </div>
@@ -445,7 +513,7 @@
             {
                 "time": "16:40-17:35",
                 "location": "高松站 Takamatsu",
-                "note": "往高松班次，車程約1小時。建議班次：15:42, 16:13, 16:42, 17:13, 17:42, 18:13",
+                "note": "往高松班次，車程約1小時。\n建議班次：15:42, 16:13, 16:42, 17:13, 17:42, 18:13",
                 "type": "transport"
             },
             {
@@ -458,13 +526,15 @@
                 "time": "晚餐",
                 "location": "お食事処 まつおか",
                 "note": "距離高松站 600公尺 (約1000日圓)",
-                "type": "dining"
+                "type": "dining",
+                "description": "這是一間當地評價不錯的家庭式食堂，提供多種定食選擇。推薦他們的炸雞定食和烤魚定食，份量十足且價格實惠。"
             },
             {
                 "time": "晚上",
                 "location": "高松丸龜町商店街、高松港夜景",
-                "note": "四國最長的商店街",
-                "type": "sightseeing"
+                "note": "",
+                "type": "sightseeing",
+                "description": "丸龜町商店街擁有巨大的圓頂拱廊，非常有特色，即便下雨也能安心逛街。走到盡頭可以前往高松港，欣賞瀨戶內海的夜景和「Liminal Air -core-」兩根彩色柱子地標。"
             }
         ]
     },
@@ -476,7 +546,7 @@
             {
                 "time": "07:20-07:30",
                 "location": "飯店至高松港",
-                "note": "從飯店步行約5-7分鐘(走慢~10分鐘內)距離約650公尺。船票通常在出航前約30分鐘開始販售，建議至少在7:30到達碼頭。",
+                "note": "從飯店步行約5-7分鐘(走慢~10分鐘內)距離約650公尺。\n船票通常在出航前約30分鐘開始販售，建議至少在7:30到達碼頭。",
                 "type": "transport"
             },
             {
@@ -500,14 +570,15 @@
             {
                 "time": "10:42-10:47",
                 "location": "寒霞溪纜車",
-                "note": "紅雲亭站搭乘纜車車程約5分鐘(纜車6分一班)纜車連接紅雲亭站和山頂站，每12分鐘一班。",
+                "note": "紅雲亭站搭乘纜車車程約5分鐘(纜車6分一班)。\n纜車連接紅雲亭站和山頂站，每12分鐘一班。",
                 "type": "transport"
             },
             {
                 "time": "11:00-13:00",
                 "location": "寒霞溪",
                 "note": "乘坐纜車到山頂，然後徒步下山",
-                "type": "sightseeing"
+                "type": "sightseeing",
+                "description": "日本三大溪谷之一，以秋天的紅葉聞名。即便不是紅葉季，奇岩怪石的景觀也非常壯觀。建議搭纜車上山，欣賞瀨戶內海全景，然後如果體力允許，可以走登山步道下山感受大自然。"
             },
             {
                 "time": "13:00-13:17",
@@ -518,20 +589,22 @@
             {
                 "time": "13:17-14:30",
                 "location": "橄欖公園",
-                "note": "拍攝魔女宅急便風車照，逛希臘風格的建築物和庭園",
-                "type": "sightseeing"
+                "note": "",
+                "type": "sightseeing",
+                "description": "這裡就是真人版《魔女宅急便》的拍攝地！記得先去紀念館免費租借「魔法掃帚」，然後到白色希臘風車前拍跳躍照。園區內還有許多種植橄欖樹的步道，充滿地中海風情。"
             },
             {
                 "time": "15:00-15:22",
                 "location": "オリーブ公園口-國際ホテル",
-                "note": "田ノ浦映画村線(橄欖公園到天使之路)國際ホテル下車步行5分鐘到天使之路",
+                "note": "田ノ浦映画村線(橄欖公園到天使之路)\n國際ホテル下車步行5分鐘到天使之路",
                 "type": "transport"
             },
             {
                 "time": "15:30-16:00",
                 "location": "天使之路",
-                "note": "先查詢當天的潮汐拍照、欣賞風景",
-                "type": "sightseeing"
+                "note": "先查詢當天的潮汐拍照",
+                "type": "sightseeing",
+                "description": "這是一條只在退潮時才會出現的沙洲路，連接小島與本島，傳說戀人手牽手走過會得到幸福。務必確認當天的乾潮時間，前後約2-3小時可以通行。"
             },
             {
                 "time": "16:58-17:08",
@@ -549,12 +622,13 @@
                 "time": "晚餐",
                 "location": "晚餐",
                 "note": "在高松港周邊或前往飯店途中用餐",
-                "type": "dining"
+                "type": "dining",
+                "description": "（尚未指定餐廳）建議可在高松港周邊尋找餐廳，或品嚐香川縣著名的骨付鳥（帶骨烤雞腿）。"
             },
             {
                 "time": "Check-in",
                 "location": "FAV HOTEL TAKAMATSU",
-                "note": "JR高松站步行5分鐘至高松築港站乘琴平電鐵平線在瓦町站下車(車程7分鐘)。瓦町站步行約4分鐘(約400公尺)即可抵達",
+                "note": "JR高松站步行5分鐘至高松築港站乘琴平電鐵平線在瓦町站下車(車程7分鐘)。\n瓦町站步行約4分鐘(約400公尺)即可抵達",
                 "type": "stay"
             }
         ]
@@ -573,14 +647,15 @@
             {
                 "time": "08:25-08:35",
                 "location": "高松站-栗林公園北口站",
-                "note": "搭乘JR 列車，再步行至栗林公園。班次:08:33、09:42。\n(JR線：\nJR栗林公園北口站：步行3分鐘，最近但班次較少。\nJR栗林站：步行20分鐘，距離稍遠。\n琴電電車：琴電栗林公園站步行10分鐘，班次頻繁，是較為理想的選擇。\n琴電巴士：從高松站搭乘約20分鐘可抵達。)",
+                "note": "搭乘JR 列車，再步行至栗林公園。班次:08:33、09:42。\n\n(JR線：\nJR栗林公園北口站：步行3分鐘，最近但班次較少。\nJR栗林站：步行20分鐘，距離稍遠。\n琴電電車：琴電栗林公園站步行10分鐘，班次頻繁，是較為理想的選擇。\n琴電巴士：從高松站搭乘約20分鐘可抵達。)",
                 "type": "transport"
             },
             {
                 "time": "08:45-11:15",
                 "location": "栗林公園",
-                "note": "欣賞日本最美庭園",
-                "type": "sightseeing"
+                "note": "",
+                "type": "sightseeing",
+                "description": "獲得米其林三星評價的日本庭園，一步一景。必定要看的是「飛來峰」，可以從高處俯瞰偃月橋與湖面，是經典的明信片角度。也可以在此體驗搭乘和船遊湖。"
             },
             {
                 "time": "11:25-11:35",
@@ -591,14 +666,16 @@
             {
                 "time": "11:45-12:45",
                 "location": "玉藻公園 (高松城跡)",
-                "note": "遊覽高松城遺址。從高松站步行10分鐘",
-                "type": "sightseeing"
+                "note": "從高松站步行10分鐘",
+                "type": "sightseeing",
+                "description": "日本三大水城之一，護城河直接引入海水，因此池裡可以看到鯛魚游泳！這裡有獨特的「鯛願成就」餵魚體驗。"
             },
             {
                 "time": "12:45-13:30",
                 "location": "午餐/取行李",
                 "note": "在JR站周邊用餐",
-                "type": "dining"
+                "type": "dining",
+                "description": "（尚未指定餐廳）高松站二樓有「拉麵港口」或車站便當可供選擇。既然來到香川，也可以把握最後機會再吃一次讚岐烏龍麵。"
             },
             {
                 "time": "14:10-15:02",
@@ -621,19 +698,22 @@
                 "time": "16:30-17:30",
                 "location": "福山城公園",
                 "note": "天守外觀、石垣、護城河",
-                "type": "sightseeing"
+                "type": "sightseeing",
+                "description": "距離新幹線車站最近的城堡！2022年剛完成築城400週年的大修。最特別的是北側天守牆面覆蓋著黑色鐵板，這是為了防禦當年假想敵的砲擊，是全日本唯一的設計。"
             },
             {
                 "time": "晚餐",
                 "location": "お好み焼き 鉄板焼き いつちゃん",
                 "note": "在地名店 (900-1,200 日圓)",
-                "type": "dining"
+                "type": "dining",
+                "description": "這是一間深受當地人喜愛的廣島燒（或稱府中燒/福山燒）小店。特色是使用大量的切絲高麗菜，口感鮮甜，搭配特製醬汁非常美味。"
             },
             {
                 "time": "晚上",
                 "location": "宮通り商店街",
-                "note": "商店街",
-                "type": "sightseeing"
+                "note": "",
+                "type": "sightseeing",
+                "description": "福山車站附近的復古商店街，雖然不像大城市那樣繁華，但保留了昭和時代的氛圍。可以在此散步感受在地生活感，或尋找巷弄裡的小酒吧。"
             }
         ]
     },
@@ -664,7 +744,8 @@
                 "time": "13:00-14:20",
                 "location": "午餐 (しまなみロマン瀬戸田港)",
                 "note": "提供丼飯多種經典料理",
-                "type": "dining"
+                "type": "dining",
+                "description": "位於瀨戶田港旁的餐廳，地理位置極佳。推薦他們的檸檬豬肉丼或海鮮丼，食材新鮮，也能品嘗到瀨戶內海特產的檸檬風味料理。"
             },
             {
                 "time": "14:20-14:35",
@@ -687,20 +768,22 @@
             {
                 "time": "16:10-16:20",
                 "location": "千光寺公園展望台",
-                "note": "搭纜車上山 (車程3分鐘)，展望台眺望瀨戶內海的島嶼風光。千光寺山纜車用JR PASS折扣(大人往返700日圓→630日圓)",
+                "note": "搭纜車上山 (車程3分鐘)，展望台眺望瀨戶內海的島嶼風光。\n千光寺山纜車用JR PASS折扣(大人往返700日圓→630日圓)",
                 "type": "transport"
             },
             {
                 "time": "16:20-17:45",
                 "location": "千光寺 → 貓之細道 → 尾道車站",
                 "note": "順著「文學之道」慢慢步行下山",
-                "type": "sightseeing"
+                "type": "sightseeing",
+                "description": "下山途中會經過許多文人墨客喜愛的小徑。「貓之細道」有很多福石貓，是愛貓人士必訪之地。沿途有許多古民家改建的咖啡廳，氛圍非常復古迷人。"
             },
             {
                 "time": "17:45-18:10",
                 "location": "晚餐 (月波食堂)",
                 "note": "距尾道站約300公尺，定食約¥1000以下",
-                "type": "dining"
+                "type": "dining",
+                "description": "一間溫馨的小食堂，提供樸實美味的日式家庭料理。推薦當日定食或魚料理，價格親民，能感受到在地的人情味。"
             },
             {
                 "time": "18:29-18:50",
@@ -731,49 +814,57 @@
                 "time": "09:20-09:40",
                 "location": "原爆圓頂館",
                 "note": "開放的戶外遺址",
-                "type": "sightseeing"
+                "type": "sightseeing",
+                "description": "世界文化遺產，原為廣島縣產業獎勵館。1945年原子彈在其上方爆炸，奇蹟似地保留了部分建築結構。這座建築是警惕世人戰爭殘酷與祈求和平的重要象徵。"
             },
             {
                 "time": "10:00-12:00",
                 "location": "和平紀念資料館",
                 "note": "步行約7分鐘（約500公尺），穿過元安橋即可抵達資料館",
-                "type": "sightseeing"
+                "type": "sightseeing",
+                "description": "館內展示了原子彈爆炸後的慘況、受害者的遺物與證言。雖然內容沉重，但能讓人深刻反思核武的可怕與和平的珍貴。建議租借語音導覽以獲得完整體驗。"
             },
             {
                 "time": "12:15-13:30",
                 "location": "午餐 (紙鶴廣場附近)",
                 "note": "步行約 9 分鐘（約650公尺），享用廣島名物「廣島燒」",
-                "type": "dining"
+                "type": "dining",
+                "description": "（尚未指定餐廳）這附近有著名的「Okonomimura（廣島燒村）」或「長田屋」，都是品嚐正宗廣島燒的好地方。廣島燒的特色是層層堆疊的麵條和配料。"
             },
             {
                 "time": "13:30-14:00",
                 "location": "紙鶴廣場",
                 "note": "",
-                "type": "sightseeing"
+                "type": "sightseeing",
+                "description": "這是一座複合式商業設施，頂樓有木質展望台「HIROSHIMA HILLS」，可以俯瞰原爆圓頂館和廣島市景。這裡還有一個特色活動是「紙鶴投入牆」，可以親手摺紙鶴並投入玻璃牆中。"
             },
             {
                 "time": "14:20-15:00",
                 "location": "廣島城",
-                "note": "被原子彈摧毀後重建",
-                "type": "sightseeing"
+                "note": "",
+                "type": "sightseeing",
+                "description": "別名「鯉城」，原本的天守閣在原爆中倒塌，現在看到的是1958年重建的。內部是歷史博物館，介紹廣島城的歷史與武士文化。若有時間可以登上天守閣頂層展望台。"
             },
             {
                 "time": "15:10-17:00",
                 "location": "縮景園",
-                "note": "美麗的庭園",
-                "type": "sightseeing"
+                "note": "",
+                "type": "sightseeing",
+                "description": "這是一座江戶時代的大名庭園，名稱寓意為「濃縮了各地的美景」。庭園中央有濯纓池，周圍環繞著小山、小橋與茶室，四季都有不同的花卉盛開，非常適合散步。"
             },
             {
                 "time": "17:15-19:30",
                 "location": "逛街與晚餐 (本通商店街)",
-                "note": "廣島最熱鬧的購物區",
-                "type": "dining"
+                "note": "",
+                "type": "dining",
+                "description": "廣島最大的拱廊商店街，聚集了藥妝店、服飾店和各種餐廳。晚餐可以在這裡尋找廣島著名的沾麵、牡蠣料理或穴子飯。"
             },
             {
                 "time": "晚餐",
                 "location": "牡蠣星鰻壽司飯便當",
                 "note": "在車站內可以買到，價格約1,300日圓",
-                "type": "dining"
+                "type": "dining",
+                "description": "廣島站的新幹線口有許多販賣「駅弁（車站便當）」的店舖。推薦必買包含廣島兩大名產——牡蠣和星鰻（穴子）的便當，在回程的新幹線上享用。"
             },
             {
                 "time": "晚上",
@@ -804,25 +895,29 @@
                 "time": "10:15-11:15",
                 "location": "嚴島神社",
                 "note": "海上大鳥居 (渡輪會繞行靠近)",
-                "type": "sightseeing"
+                "type": "sightseeing",
+                "description": "建立在海上的神社，漲潮時彷彿漂浮在水面。最知名的大鳥居高達16公尺，如果是退潮時間，可以直接走到鳥居底下觀看。"
             },
             {
                 "time": "11:50-12:50",
                 "location": "表參道商店街 / 午餐",
                 "note": "みやじま食堂 (牡蠣飯定食¥1000左右)",
-                "type": "dining"
+                "type": "dining",
+                "description": "宮島最熱鬧的商店街，這裡有各式各樣的牡蠣料理（炸牡蠣、烤牡蠣）、紅葉饅頭（甚至有炸的！），還有巨大的飯匙紀念品。小心這裡的鹿會搶食物喔！"
             },
             {
                 "time": "13:00-14:20",
                 "location": "宮島纜車 / 彌山頂部",
                 "note": "如排隊時間長，可考慮放棄大聖院或縮短購物時間",
-                "type": "sightseeing"
+                "type": "sightseeing",
+                "description": "彌山是宮島的最高峰，自古以來就被視為神山。搭乘纜車上山後，可以抵達獅子岩展望台，眺望瀨戶內海的絕美群島景色。若體力允許，可再徒步約30分鐘登上山頂。"
             },
             {
                 "time": "14:20-15:20",
                 "location": "大聖院",
                 "note": "",
-                "type": "sightseeing"
+                "type": "sightseeing",
+                "description": "宮島歷史最古老的寺院，與空海大師有深厚淵源。境內有五百羅漢像（戴著毛線帽非常可愛）、遍照窟（掛滿燈籠的洞窟），氣氛莊嚴且充滿靈氣。"
             },
             {
                 "time": "15:47-16:14",
@@ -864,32 +959,37 @@
             {
                 "time": "09:00-12:00",
                 "location": "北野異人館街",
-                "note": "風見雞館和萌黃之館最具代表性",
-                "type": "sightseeing"
+                "note": "",
+                "type": "sightseeing",
+                "description": "充滿異國情調的區域，保留了許多明治時期外國人居住的洋房。這裡的街道坡度較陡，建議穿好走的鞋子。路邊也有許多特色小店和星巴克概念店。"
             },
             {
                 "time": "13:00-13:30",
                 "location": "生田神社",
                 "note": "",
-                "type": "sightseeing"
+                "type": "sightseeing",
+                "description": "擁有1800年以上歷史的古老神社，是神戶地名的由來，也是著名的「戀愛結緣」神社。境內的「生田之森」是城市中的一片綠洲。"
             },
             {
                 "time": "13:30-15:30",
                 "location": "南京町",
                 "note": "午餐：龍鳳酒家(廣東風排骨飯牛腩飯)",
-                "type": "dining"
+                "type": "dining",
+                "description": "日本三大中華街之一，充滿活力的紅色建築與各式小吃攤販。除了龍鳳酒家外，一定要嚐嚐「老祥記」的豬肉包，總是排著長長的人龍。"
             },
             {
                 "time": "15:30-16:30",
                 "location": "美利堅公園",
                 "note": "看港口夜景、神戶港塔、BE KOBE 打卡點。",
-                "type": "sightseeing"
+                "type": "sightseeing",
+                "description": "神戶港邊的開放式公園，擁有地標性的紅色神戶港塔和像帆船一樣的海洋博物館。這裡還有巨大的「BE KOBE」紀念碑，是熱門的拍照打卡點。"
             },
             {
                 "time": "晚餐",
                 "location": "神戶牛Steakland Kobe-kan",
                 "note": "步行到「元町站」10-15 分鐘，元町附近吃晚餐神戶牛",
-                "type": "dining"
+                "type": "dining",
+                "description": "這是一家以高性價比著稱的神戶牛鐵板燒餐廳，非常受觀光客歡迎。午餐時段通常大排長龍，晚餐價位稍高但依然比高級料亭親民，能看著師傅在鐵板前料理。"
             },
             {
                 "time": "18:30-19:05",
@@ -913,8 +1013,9 @@
             {
                 "time": "09:10-10:30",
                 "location": "吉備津神社",
-                "note": "桃太郎傳說相關",
-                "type": "sightseeing"
+                "note": "",
+                "type": "sightseeing",
+                "description": "這裡是桃太郎傳說的原型之地。最壯觀的是沿著山坡地形建造、全長約360公尺的長迴廊，走在其中非常有神祕感。本殿也是日本唯一的「吉備津造」建築風格，被列為國寶。"
             },
             {
                 "time": "10:46-11:19",
@@ -926,35 +1027,41 @@
                 "time": "11:40-14:40",
                 "location": "倉敷美觀 / 午餐",
                 "note": "常右衛門食堂 (家庭風定食約999元以下)",
-                "type": "dining"
+                "type": "dining",
+                "description": "白壁屋敷與倉敷川柳樹交織的古老街道，非常適合穿著和服漫步。可以搭乘小船遊河，或者去逛逛「大原美術館」。這裡也有許多販賣牛仔布製品（倉敷特產）和紙膠帶（MT膠帶發源地）的店家。"
             },
             {
                 "time": "14:40-15:00",
                 "location": "阿智神社",
                 "note": "倉敷美觀地區步行190公尺",
-                "type": "sightseeing"
+                "type": "sightseeing",
+                "description": "位於鶴形山山頂的神社，需要爬一段階梯才能到達。從這裡可以俯瞰整個倉敷美觀地區的黑瓦白牆街景，視野非常遼闊。"
             },
             {
                 "time": "15:00-16:00",
                 "location": "林源十郎商店",
                 "note": "可至三樓展望台",
-                "type": "sightseeing"
+                "type": "sightseeing",
+                "description": "由舊藥局改建的複合式設計商場，集合了多家生活雜貨店與咖啡廳。頂樓的露台免費開放，是另一個眺望倉敷美觀地區的好地方。"
             },
             {
                 "time": "晚上",
                 "location": "倉敷夜景",
                 "note": "林源十郎商店三樓展望台 / 倉敷川沿岸夜間點燈",
-                "type": "sightseeing"
+                "type": "sightseeing",
+                "description": "入夜後，倉敷川沿岸會點起由世界級照明設計師石井幹子設計的燈光。不同於白天的熱鬧，夜晚的倉敷呈現出一種靜謐而夢幻的美感，非常浪漫。"
             },
             {
                 "time": "購物",
                 "location": "三井OUTLET PARK 倉敷",
-                "type": "sightseeing"
+                "type": "sightseeing",
+                "description": "位於倉敷站北口，與Ario商場相連。這裡集合了許多日本與國際品牌，是離開岡山前最後衝刺購物的好地方。"
             },
             {
                 "time": "晚餐",
                 "location": "常盤食堂 (~999 日圓家常風煮魚/燒魚定食)",
-                "type": "dining"
+                "type": "dining",
+                "description": "（尚未指定餐廳）常盤食堂是當地受歡迎的平價食堂，提供炸物、燒魚等家常定食。如果想換口味，倉敷站周邊也有許多居酒屋或拉麵店。"
             },
             {
                 "time": "晚上",
@@ -972,8 +1079,9 @@
             {
                 "time": "08:00-10:30",
                 "location": "岡山後樂園 + 岡山城外觀",
-                "note": "日本三大名園之一",
-                "type": "sightseeing"
+                "note": "",
+                "type": "sightseeing",
+                "description": "獲得米其林三星評價的庭園，視野非常開闊，沒有任何遮蔽物。可以從庭園中看到黝黑的岡山城（烏城）作為背景，是絕佳的拍照點。"
             },
             {
                 "time": "10:45-11:05",
@@ -985,7 +1093,8 @@
                 "time": "11:15-12:15",
                 "location": "午餐 (岡山車站內或地下街)",
                 "note": "岡山一番街或SANSUTE 岡山",
-                "type": "dining"
+                "type": "dining",
+                "description": "（尚未指定餐廳）岡山站直結的購物中心有非常多餐廳選擇，包含壽司、豬排飯、義大利麵等。這是離開日本前的最後一餐，建議挑選自己想吃的料理。"
             },
             {
                 "time": "12:40-13:10",
@@ -1064,11 +1173,11 @@
         let activeView = itineraryData[1].date; // 預設第二天
 
         const typeStyles = {
-            'sightseeing': { label: '景點', bg: 'bg-teal-50', border: 'border-teal-500', ring: 'bg-teal-500 ring-teal-100' },
-            'dining': { label: '餐廳', bg: 'bg-red-50', border: 'border-red-500', ring: 'bg-red-500 ring-red-100' },
-            'transport': { label: '交通', bg: 'bg-indigo-50', border: 'border-indigo-500', ring: 'bg-indigo-500 ring-indigo-100' },
-            'stay': { label: '住宿', bg: 'bg-orange-50', border: 'border-orange-500', ring: 'bg-orange-500 ring-orange-100' },
-            'activity': { label: '活動/購物', bg: 'bg-yellow-50', border: 'border-yellow-500', ring: 'bg-yellow-500 ring-yellow-100' }
+            'sightseeing': { label: '景點', bg: 'bg-teal-50', border: 'border-teal-500', ring: 'bg-teal-500 ring-teal-100', badge: 'bg-teal-500' },
+            'dining': { label: '餐廳', bg: 'bg-red-50', border: 'border-red-500', ring: 'bg-red-500 ring-red-100', badge: 'bg-red-500' },
+            'transport': { label: '交通', bg: 'bg-indigo-50', border: 'border-indigo-500', ring: 'bg-indigo-500 ring-indigo-100', badge: 'bg-indigo-500' },
+            'stay': { label: '住宿', bg: 'bg-orange-50', border: 'border-orange-500', ring: 'bg-orange-500 ring-orange-100', badge: 'bg-orange-500' },
+            'activity': { label: '活動/購物', bg: 'bg-yellow-50', border: 'border-yellow-500', ring: 'bg-yellow-500 ring-yellow-100', badge: 'bg-yellow-500' }
         };
         
         // --- 功能函數 ---
@@ -1091,14 +1200,35 @@
                 btn.classList.add('bg-white', 'text-gray-700');
                 btn.classList.remove('bg-blue-600', 'text-white', 'ring-2', 'ring-blue-300');
                 btn.innerHTML = '✏️';
-                footerMsg.innerHTML = '💡 此為純瀏覽模式';
+                footerMsg.innerHTML = '💡 點擊有 📖 圖示的卡片可查看介紹';
                 footerMsg.classList.remove('text-blue-600', 'font-bold');
+            }
+            // 重新渲染以更新點擊事件
+            if (activeView !== 'ACCOMMODATION' && activeView !== 'FLIGHTS') {
+                renderItineraryContent(activeView);
             }
         }
 
-        function handleCardClick(eventIndex) {
-            if (!isEditMode) return;
-            
+        function handleCardClick(eventIndex, eventType) {
+            // 編輯模式：全部可點，開啟編輯視窗
+            if (isEditMode) {
+                openEditModal(eventIndex);
+            } 
+            // 瀏覽模式：只有特定類型且有詳細說明的可點，開啟詳細視窗
+            else {
+                const dayDataIndex = itineraryData.findIndex(d => d.date === activeView);
+                if (dayDataIndex === -1) return;
+                const eventData = itineraryData[dayDataIndex].events[eventIndex];
+                
+                // 檢查是否有詳細說明 (只針對景點和餐廳，或者任何有填寫description的項目)
+                if ((eventData.type === 'sightseeing' || eventData.type === 'dining') && 
+                    eventData.description && eventData.description.trim() !== "") {
+                    openDetailModal(eventIndex);
+                }
+            }
+        }
+
+        function openEditModal(eventIndex) {
             // 找出當天數據
             const dayDataIndex = itineraryData.findIndex(d => d.date === activeView);
             if (dayDataIndex === -1) return;
@@ -1112,13 +1242,35 @@
             document.getElementById('edit-location').value = eventData.location;
             document.getElementById('edit-note').value = eventData.note;
             document.getElementById('edit-type').value = eventData.type || 'sightseeing';
+            
+            // 填入新的詳細介紹欄位，如果沒有則為空字串
+            document.getElementById('edit-description').value = eventData.description || '';
 
             // 顯示 Modal
             document.getElementById('edit-modal').classList.remove('hidden');
         }
 
-        function closeModal() {
-            document.getElementById('edit-modal').classList.add('hidden');
+        function openDetailModal(eventIndex) {
+            const dayDataIndex = itineraryData.findIndex(d => d.date === activeView);
+            if (dayDataIndex === -1) return;
+            const eventData = itineraryData[dayDataIndex].events[eventIndex];
+            const typeStyle = typeStyles[eventData.type] || typeStyles['sightseeing'];
+
+            // 設置內容
+            document.getElementById('detail-title').textContent = eventData.location;
+            document.getElementById('detail-content').textContent = eventData.description;
+            
+            // 設置標籤樣式
+            const badge = document.getElementById('detail-type-badge');
+            badge.textContent = typeStyle.label;
+            badge.className = `text-xs font-bold px-2 py-0.5 rounded text-white mb-1 inline-block ${typeStyle.badge}`;
+
+            // 顯示 Modal
+            document.getElementById('detail-modal').classList.remove('hidden');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
         }
 
         function saveEventChanges() {
@@ -1132,11 +1284,12 @@
                 time: document.getElementById('edit-time').value,
                 location: document.getElementById('edit-location').value,
                 note: document.getElementById('edit-note').value,
-                type: document.getElementById('edit-type').value
+                type: document.getElementById('edit-type').value,
+                description: document.getElementById('edit-description').value // 儲存詳細介紹
             };
 
             // 關閉 Modal 並重新渲染
-            closeModal();
+            closeModal('edit-modal');
             renderItineraryContent(activeView);
         }
 
@@ -1410,7 +1563,15 @@
                 const type = event.type || 'transport';
                 const styles = typeStyles[type] || typeStyles['transport']; 
                 
-                // 加入 onclick 事件，傳入 index
+                // 檢查是否有詳細說明
+                const hasDescription = (event.description && event.description.trim() !== "");
+                // 判斷是否顯示游標手勢 (編輯模式恆為真，瀏覽模式只有詳細內容時為真)
+                const cursorClass = isEditMode ? 'cursor-pointer' : (hasDescription ? 'has-detail-cursor' : '');
+                // 書本圖示 (只在瀏覽模式且有說明時顯示，或編輯模式顯示提示)
+                const bookIcon = hasDescription ? '<span class="absolute top-3 right-3 text-lg" title="點擊查看介紹">📖</span>' : '';
+
+                // onclick 邏輯統一由 handleCardClick 處理
+                // 修改說明：移除了 ${event.note} 前面的所有空白縮排，確保 whitespace-pre-wrap 不會顯示多餘空白
                 html += `
                     <div class="flex relative itinerary-item" data-index="${index}">
                         
@@ -1425,19 +1586,18 @@
                         <div class="timeline-line"></div>
                         
                         <div class="flex-grow pb-6 pl-4 md:pb-8 md:pl-8"> 
-                            <div onclick="handleCardClick(${index})" class="${styles.bg} p-3 md:p-5 rounded-sm shadow-sm border-l-2 ${styles.border} timeline-card bg-opacity-60"> 
+                            <div onclick="handleCardClick(${index}, '${type}')" class="${styles.bg} p-3 md:p-5 rounded-sm shadow-sm border-l-2 ${styles.border} timeline-card bg-opacity-60 relative ${cursorClass}"> 
+                                ${!isEditMode ? bookIcon : ''}
                                 <div class="flex flex-col">
                                     <div class="flex items-start justify-between relative">
-                                        <p class="text-lg md:text-xl font-bold text-gray-800 mr-2 leading-snug tracking-wide">
+                                        <p class="text-lg md:text-xl font-bold text-gray-800 mr-2 leading-snug tracking-wide pr-6">
                                             ${event.location}
                                         </p>
                                     </div>
                                     
                                     <div class="mt-2 pt-2 md:mt-3 md:pt-3 border-t border-dashed border-gray-200 w-full flex flex-col md:flex-row md:justify-between md:items-end gap-2">
                                         ${event.note && event.note !== '點擊新增備註' ? `
-                                            <p class="text-sm md:text-base text-gray-600 leading-relaxed w-full">
-                                                ${event.note}
-                                            </p>
+                                            <p class="text-sm md:text-base text-gray-600 leading-relaxed w-full whitespace-pre-wrap">${event.note}</p>
                                         ` : `
                                             <p class="text-sm md:text-base text-gray-400 leading-relaxed w-full italic">
                                                 無備註
